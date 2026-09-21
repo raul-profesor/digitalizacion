@@ -1,4 +1,4 @@
-# BLOQUE 2 — TECNOLOGÍAS HABILITADORAS DIGITALES (THD)
+# UD 2 — TECNOLOGÍAS HABILITADORAS DIGITALES (THD)
 
 > Apuntes extendidos a partir del material de clase (presentación del Bloque 2).
 > Asignatura: **Digitalización** — Curso 2026/27.
