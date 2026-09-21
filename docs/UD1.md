@@ -3,7 +3,7 @@
 > Apuntes extendidos a partir del material de clase (presentación del Bloque 1).
 > Asignatura: **Digitalización** — Curso 2026/27.
 
----
+
 
 ## Índice
 
