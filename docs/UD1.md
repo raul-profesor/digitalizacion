@@ -44,7 +44,7 @@ La presión competitiva, las expectativas del cliente y los marcos regulatorios 
 - **Trazabilidad completa**: poder seguir un producto desde la materia prima, por todas las fases de producción, hasta la entrega al cliente final —algo cada vez más exigido por clientes y reguladores.
 - **Personalización masiva**: el mercado actual demanda lotes cada vez más pequeños e incluso unidades únicas adaptadas a cada cliente, lo que sólo es viable con sistemas flexibles y conectados.
 - **Sostenibilidad**: medir y optimizar el consumo de energía, agua y materia prima reduce costes y, al mismo tiempo, el impacto ambiental.
-- **Cumplimiento normativo**: regulaciones como las de calidad (ISO 9001),食品安全 (IFS, BRC) o medio ambiente (ISO 14001) exigen registrar digitalmente muchos procesos.
+- **Cumplimiento normativo**: regulaciones como las de calidad (ISO 9001),seguridad alimentaria (IFS, BRC) o medio ambiente (ISO 14001) exigen registrar digitalmente muchos procesos.
 - **Atracción de talento**: las nuevas generaciones de profesionales prefieren entornos tecnológicamente avanzados.
 
 ### 1.3. Los diez pilares de la Industria 4.0
@@ -240,7 +240,7 @@ Antes de adquirir cualquier tecnología, la empresa debería poder responder con
 
 1. **¿Qué problema de negocio se quiere resolver?** Si no hay un problema claro, no hay proyecto.
 2. **¿Qué alternativas existen?** Proveedores, soluciones, hacer o comprar, construir o subcontratar.
-3. **¿Cuál es el coste total de propiedad (TCO)?** No sólo el precio de compra, sino licencias, mantenimiento, formación, integraciones,能耗, etc.
+3. **¿Cuál es el coste total de propiedad (TCO)?** No sólo el precio de compra, sino licencias, mantenimiento, formación, integraciones, consumo de energía, etc.
 4. **¿Cómo se integra con los sistemas actuales?** Una solución aislada suele acabar sin usarse.
 5. **¿Qué formación necesita el personal?** Sin formación, la herramienta se abandona.
 6. **¿Qué riesgos implica?** Técnicos, de seguridad, de dependencia de un único proveedor, de cumplimiento normativo.
