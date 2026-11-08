@@ -1,0 +1,3184 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://raul-profesor.github.io/digitalizacion/UD3/">
+      
+      
+        <link rel="prev" href="../UD2/">
+      
+      
+        <link rel="next" href="../UD4/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.69">
+    
+    
+      
+        <title>UD3 – Computación en la nube - Digitalización aplicada al sector productivo</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.e15858d4.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b27955a4.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-book-open%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%205v16M20.001%2019A2%202%200%200%200%2022%2017V5a2%202%200%200%200-1.999-2L16%203.002A5%205%200%200%200%2012%205a5%205%200%200%200-4-2H4a2%202%200%200%200-2%202v12a2%202%200%200%200%201.999%202H8a5%205%200%200%201%204%202%205%205%200%200%201%204-2z%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-bug%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%2020v-9M14%207a4%204%200%200%201%204%204v3a6%206%200%200%201-12%200v-3a4%204%200%200%201%204-4zM14.12%203.88%2016%202%22/%3E%3Cpath%20d%3D%22M21%2021a4%204%200%200%200-3.81-4M21%205a4%204%200%200%201-3.55%203.97M22%2013h-4M3%2021a4%204%200%200%201%203.81-4M3%205a4%204%200%200%200%203.55%203.97M6%2013H2M8%202l1.88%201.88M9%207.13V6a3%203%200%201%201%206%200v1.13%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-shield-alert%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M20%2013c0%205-3.5%207.5-7.66%208.95a1%201%200%200%201-.67-.01C7.5%2020.5%204%2018%204%2013V6a1%201%200%200%201%201-1c2%200%204.5-1.2%206.24-2.72a1.17%201.17%200%200%201%201.52%200C14.51%203.81%2017%205%2019%205a1%201%200%200%201%201%201zM12%208v4M12%2016h.01%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-flask-conical%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M14%202v6a2%202%200%200%200%20.245.96l5.51%2010.08A2%202%200%200%201%2018%2022H6a2%202%200%200%201-1.755-2.96l5.51-10.08A2%202%200%200%200%2010%208V2M6.453%2015h11.094M8.5%202h7%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-circle-x%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22/%3E%3Cpath%20d%3D%22m15%209-6%206M9%209l6%206%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-info%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22/%3E%3Cpath%20d%3D%22M12%2016v-4M12%208h.01%22/%3E%3C/svg%3E');--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-notebook%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M2%206h4M2%2010h4M2%2014h4M2%2018h4%22/%3E%3Crect%20width%3D%2216%22%20height%3D%2220%22%20x%3D%224%22%20y%3D%222%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M16%202v20%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-circle-help%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22/%3E%3Cpath%20d%3D%22M9.09%209a3%203%200%200%201%205.83%201c0%202-3%203-3%203M12%2017h.01%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-quote%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M16%203a2%202%200%200%200-2%202v6a2%202%200%200%200%202%202%201%201%200%200%201%201%201v1a2%202%200%200%201-2%202%201%201%200%200%200-1%201v2a1%201%200%200%200%201%201%206%206%200%200%200%206-6V5a2%202%200%200%200-2-2zM5%203a2%202%200%200%200-2%202v6a2%202%200%200%200%202%202%201%201%200%200%201%201%201v1a2%202%200%200%201-2%202%201%201%200%200%200-1%201v2a1%201%200%200%200%201%201%206%206%200%200%200%206-6V5a2%202%200%200%200-2-2z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-circle-check%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22/%3E%3Cpath%20d%3D%22m16%209-5.5%205.5L8%2012%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-lightbulb%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M15%2014c.2-1%20.7-1.7%201.5-2.5%201-.9%201.5-2.2%201.5-3.5A6%206%200%200%200%206%208c0%201%20.2%202.2%201.5%203.5.7.7%201.3%201.5%201.5%202.5M9%2018h6M10%2022h4%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-triangle-alert%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m21.73%2018-8-14a2%202%200%200%200-3.48%200l-8%2014A2%202%200%200%200%204%2021h16a2%202%200%200%200%201.73-3M12%209v4M12%2017h.01%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Saltar a contenido
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="./.." title="Digitalización aplicada al sector productivo" class="md-header__button md-logo" aria-label="Digitalización aplicada al sector productivo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navegación">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Digitalización aplicada al sector productivo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD3 – Computación en la nube
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Buscar">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Buscar">
+  <button type="button" class="md-search__button">
+    Buscar
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../UD1/" class="md-tabs__link">
+          
+  
+  Unidad1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../UD2/" class="md-tabs__link">
+          
+  
+  Unidad2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="././" class="md-tabs__link">
+          
+  
+  Unidad3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../UD4/" class="md-tabs__link">
+          
+  
+  Unidad4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../UD5.md" class="md-tabs__link">
+          
+  
+  Unidad5
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../UD6.md" class="md-tabs__link">
+          
+  
+  Unidad6
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Digitalización aplicada al sector productivo" class="md-nav__button md-logo" aria-label="Digitalización aplicada al sector productivo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    Digitalización aplicada al sector productivo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unidad1
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Unidad1
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  UD 1 — DIGITALIZACIÓN EN LOS SISTEMAS PRODUCTIVOS
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unidad2
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Unidad2
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  UD 2 — TECNOLOGÍAS HABILITADORAS DIGITALES (THD)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unidad3
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Unidad3
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  UD3 – Computación en la nube
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  UD3 – Computación en la nube
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Índice
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-nos-ponemos-en-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Nos ponemos en contexto
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Nos ponemos en contexto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-evolucion-historica-resumida" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.1 Evolución histórica resumida
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-por-que-ahora" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.2 ¿Por qué ahora?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-en-que-consiste-la-computacion-en-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. ¿En qué consiste la computación en la nube
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. ¿En qué consiste la computación en la nube">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-los-cuatro-pilares-que-aparecen-en-la-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.1 Los cuatro pilares que aparecen en la unidad
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ejemplo-cotidiano" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.2 Ejemplo cotidiano
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-modelos-de-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. Modelos de nube
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Modelos de nube">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-nube-publica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.1 Nube pública
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-nube-privada" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.2 Nube privada
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-nube-hibrida" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.3 Nube híbrida
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-multinube" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.4 Multinube
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-cuadro-comparativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.5 Cuadro comparativo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-servicios-en-la-nube-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. Servicios en la nube: capas
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Servicios en la nube: capas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-que-gestiona-cada-parte" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.1 ¿Qué gestiona cada parte?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-la-idea-central" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.2 La idea central
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-modelos-de-servicio-iaas-paas-saas-xaas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. Modelos de servicio: IaaS, PaaS, SaaS, XaaS
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Modelos de servicio: IaaS, PaaS, SaaS, XaaS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-iaas-infrastructure-as-a-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.1 IaaS – Infrastructure as a Service
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-paas-platform-as-a-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.2 PaaS – Platform as a Service
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-saas-software-as-a-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.3 SaaS – Software as a Service
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-xaas-anything-as-a-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.4 XaaS – Anything as a Service
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-comparativa-iaas-paas-saas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.5 Comparativa IaaS / PaaS / SaaS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-soluciones-saas-b2b-b2c-horizontal-y-vertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6. Soluciones SaaS: B2B, B2C, horizontal y vertical
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Soluciones SaaS: B2B, B2C, horizontal y vertical">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-saas-b2b-business-to-business" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.1 SaaS B2B (Business to Business)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-saas-b2c-business-to-consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.2 SaaS B2C (Business to Consumer)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-saas-horizontal" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.3 SaaS Horizontal
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-saas-vertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.4 SaaS Vertical
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-cuadro-resumen-saas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.5 Cuadro resumen SaaS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-soluciones-usando-cada-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7. Soluciones usando cada modelo
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Soluciones usando cada modelo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-soluciones-iaas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.1 Soluciones IaaS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-soluciones-paas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.2 Soluciones PaaS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-soluciones-saas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.3 Soluciones SaaS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-edge-fog-y-mist-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8. Edge, Fog y Mist Computing
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Edge, Fog y Mist Computing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-edge-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.1 Edge Computing
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-fog-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.2 Fog Computing
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-mist-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.3 Mist Computing
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-cuadro-comparativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.4 Cuadro comparativo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-impacto-de-la-computacion-en-la-nube-en-la-rentabilidad-de-una-empresa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9. Impacto de la computación en la nube en la rentabilidad de una empresa
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Impacto de la computación en la nube en la rentabilidad de una empresa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-acceso-a-tecnologia-avanzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.1 Acceso a tecnología avanzada
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-reduccion-de-costes-operativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.2 Reducción de costes operativos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-escalabilidad-y-adaptabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.3 Escalabilidad y adaptabilidad
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-focalizacion-en-la-innovacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.4 Focalización en la innovación
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-resumen-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.5 Resumen visual
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10. Conclusiones
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-glosario-de-terminos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        11. Glosario de términos
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unidad4
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Unidad4
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  UD4: INTELIGENCIA ARTIFICIAL
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unidad5
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Unidad5
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD5.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  none
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unidad6
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Unidad6
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD6.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  none
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Índice
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-nos-ponemos-en-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Nos ponemos en contexto
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Nos ponemos en contexto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-evolucion-historica-resumida" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.1 Evolución histórica resumida
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-por-que-ahora" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.2 ¿Por qué ahora?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-en-que-consiste-la-computacion-en-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. ¿En qué consiste la computación en la nube
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. ¿En qué consiste la computación en la nube">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-los-cuatro-pilares-que-aparecen-en-la-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.1 Los cuatro pilares que aparecen en la unidad
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ejemplo-cotidiano" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.2 Ejemplo cotidiano
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-modelos-de-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. Modelos de nube
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Modelos de nube">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-nube-publica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.1 Nube pública
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-nube-privada" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.2 Nube privada
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-nube-hibrida" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.3 Nube híbrida
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-multinube" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.4 Multinube
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-cuadro-comparativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.5 Cuadro comparativo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-servicios-en-la-nube-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. Servicios en la nube: capas
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Servicios en la nube: capas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-que-gestiona-cada-parte" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.1 ¿Qué gestiona cada parte?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-la-idea-central" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.2 La idea central
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-modelos-de-servicio-iaas-paas-saas-xaas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. Modelos de servicio: IaaS, PaaS, SaaS, XaaS
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Modelos de servicio: IaaS, PaaS, SaaS, XaaS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-iaas-infrastructure-as-a-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.1 IaaS – Infrastructure as a Service
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-paas-platform-as-a-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.2 PaaS – Platform as a Service
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-saas-software-as-a-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.3 SaaS – Software as a Service
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-xaas-anything-as-a-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.4 XaaS – Anything as a Service
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-comparativa-iaas-paas-saas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.5 Comparativa IaaS / PaaS / SaaS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-soluciones-saas-b2b-b2c-horizontal-y-vertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6. Soluciones SaaS: B2B, B2C, horizontal y vertical
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Soluciones SaaS: B2B, B2C, horizontal y vertical">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-saas-b2b-business-to-business" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.1 SaaS B2B (Business to Business)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-saas-b2c-business-to-consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.2 SaaS B2C (Business to Consumer)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-saas-horizontal" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.3 SaaS Horizontal
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-saas-vertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.4 SaaS Vertical
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-cuadro-resumen-saas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.5 Cuadro resumen SaaS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-soluciones-usando-cada-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7. Soluciones usando cada modelo
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Soluciones usando cada modelo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-soluciones-iaas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.1 Soluciones IaaS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-soluciones-paas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.2 Soluciones PaaS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-soluciones-saas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.3 Soluciones SaaS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-edge-fog-y-mist-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8. Edge, Fog y Mist Computing
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Edge, Fog y Mist Computing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-edge-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.1 Edge Computing
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-fog-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.2 Fog Computing
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-mist-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.3 Mist Computing
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-cuadro-comparativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.4 Cuadro comparativo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-impacto-de-la-computacion-en-la-nube-en-la-rentabilidad-de-una-empresa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9. Impacto de la computación en la nube en la rentabilidad de una empresa
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Impacto de la computación en la nube en la rentabilidad de una empresa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-acceso-a-tecnologia-avanzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.1 Acceso a tecnología avanzada
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-reduccion-de-costes-operativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.2 Reducción de costes operativos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-escalabilidad-y-adaptabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.3 Escalabilidad y adaptabilidad
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-focalizacion-en-la-innovacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.4 Focalización en la innovación
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-resumen-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.5 Resumen visual
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10. Conclusiones
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-glosario-de-terminos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        11. Glosario de términos
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegación" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="./.." class="md-path__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="././" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Unidad3
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+
+<h1 id="ud3-computacion-en-la-nube">UD3 – Computación en la nube</h1>
+<blockquote>
+<p>Apuntes ampliados y detallados para alumnado de <strong>FP DAW (Desarrollo de Aplicaciones Web)</strong>.
+Material elaborado a partir de la presentación de la unidad didáctica.</p>
+</blockquote>
+<hr />
+<h2 id="indice">Índice</h2>
+<ol>
+<li><a href="#1-nos-ponemos-en-contexto">Nos ponemos en contexto</a></li>
+<li><a href="#2-en-qué-consiste-la-computación-en-la-nube">¿En qué consiste la computación en la nube?</a></li>
+<li><a href="#3-modelos-de-nube">Modelos de nube</a></li>
+<li>3.1 <a href="#31-nube-pública">Nube pública</a></li>
+<li>3.2 <a href="#32-nube-privada">Nube privada</a></li>
+<li>3.3 <a href="#33-nube-híbrida">Nube híbrida</a></li>
+<li>3.4 <a href="#34-multinube">Multinube</a></li>
+<li><a href="#4-servicios-en-la-nube-capas">Servicios en la nube: capas</a></li>
+<li><a href="#5-modelos-de-servicio-iaas-paas-saas-xaas">Modelos de servicio: IaaS, PaaS, SaaS, XaaS</a></li>
+<li>5.1 <a href="#51-iaas--infrastructure-as-a-service">IaaS – Infrastructure as a Service</a></li>
+<li>5.2 <a href="#52-paas--platform-as-a-service">PaaS – Platform as a Service</a></li>
+<li>5.3 <a href="#53-saas--software-as-a-service">SaaS – Software as a Service</a></li>
+<li>5.4 <a href="#54-xaas--anything-as-a-service">XaaS – Anything as a Service</a></li>
+<li><a href="#6-soluciones-saas-b2b-b2c-horizontal-y-vertical">Soluciones SaaS: B2B, B2C, horizontal y vertical</a></li>
+<li><a href="#7-soluciones-usando-cada-modelo">Soluciones usando cada modelo</a></li>
+<li><a href="#8-edge-fog-y-mist-computing">Edge, Fog y Mist Computing</a></li>
+<li><a href="#9-impacto-en-la-rentabilidad-de-una-empresa">Impacto en la rentabilidad de una empresa</a></li>
+<li><a href="#10-conclusiones">Conclusiones</a></li>
+<li><a href="#11-glosario-de-términos">Glosario de términos</a></li>
+</ol>
+<hr />
+<h2 id="1-nos-ponemos-en-contexto">1. Nos ponemos en contexto</h2>
+<p>La computación en la nube no es algo que haya aparecido de la noche a la mañana. Es el resultado de décadas de evolución tecnológica. Repasarla nos ayuda a entender <strong>por qué hoy en día es tan importante</strong> y qué problemas viene a resolver.</p>
+<h3 id="11-evolucion-historica-resumida">1.1 Evolución histórica resumida</h3>
+<table>
+<thead>
+<tr>
+<th>Hito</th>
+<th>Qué aportó</th>
+<th>Por qué importa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mainframes</strong> (años 60-80)</td>
+<td>Ordenadores centrales enormes a los que se conectaban terminales "tontos".</td>
+<td>Primer modelo de computación compartida: muchos usuarios usaban un único equipo potente.</td>
+</tr>
+<tr>
+<td><strong>PC y cliente-servidor</strong> (años 80-90)</td>
+<td>El ordenador personal y las redes locales (LAN).</td>
+<td>La potencia se reparte por los escritorios. Aparecen los servidores en las empresas.</td>
+</tr>
+<tr>
+<td><strong>Virtualización</strong> (años 2000)</td>
+<td>Ejecutar varios "ordenadores virtuales" dentro de un único servidor físico.</td>
+<td>Se aprovecha mejor el hardware y se independiza el software del equipo físico.</td>
+</tr>
+<tr>
+<td><strong>Aplicaciones web</strong> (años 2000)</td>
+<td>Gmail, Google Docs, Salesforce, etc.</td>
+<td>El software se usa desde el navegador, sin instalar nada en local.</td>
+</tr>
+<tr>
+<td><strong>Lanzamiento de AWS (2006)</strong></td>
+<td>Amazon ofrece a terceros su propia infraestructura.</td>
+<td>Nace el cloud computing comercial tal y como lo conocemos.</td>
+</tr>
+<tr>
+<td><strong>Google Cloud Platform y Microsoft Azure</strong></td>
+<td>Más proveedores compiten en el mercado.</td>
+<td>Se abaratan los precios y mejora la calidad del servicio.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Idea clave:</strong> cada paso de esta evolución ha consistido en <strong>externalizar</strong> algo que antes estaba en la empresa (el ordenador central, el servidor físico, el software instalado) hacia un proveedor que lo gestiona por nosotros. La nube es el último paso de esa tendencia: externalizamos toda la infraestructura.</p>
+</blockquote>
+<h3 id="12-por-que-ahora">1.2 ¿Por qué ahora?</h3>
+<p>Tres motivos explican el éxito actual de la nube:</p>
+<ol>
+<li><strong>Internet es rápido y está en todas partes</strong> (fibra, 4G/5G, WiFi).</li>
+<li><strong>La virtualización ha madurado</strong>, permitiendo aislar recursos de forma eficiente.</li>
+<li><strong>El modelo de pago por uso</strong> encaja con las necesidades reales de las empresas (pagar solo por lo que se consume, como con la luz o el agua).</li>
+</ol>
+<hr />
+<h2 id="2-en-que-consiste-la-computacion-en-la-nube">2. ¿En qué consiste la computación en la nube</h2>
+<p><strong>Definición:</strong> la computación en la nube (<em>cloud computing</em>) es un modelo que permite acceder bajo demanda, a través de Internet, a un conjunto compartido de recursos configurables (servidores, almacenamiento, redes, aplicaciones y servicios) que pueden aprovisionarse y liberarse rápidamente con un mínimo esfuerzo de gestión o interacción con el proveedor (adaptación de la definición del NIST).</p>
+<p>En la práctica, esto significa que:</p>
+<ul>
+<li>No necesitamos comprar ni mantener servidores propios.</li>
+<li>Podemos aumentar o reducir la capacidad contratada en minutos.</li>
+<li>Pagamos únicamente por lo que usamos.</li>
+</ul>
+<h3 id="21-los-cuatro-pilares-que-aparecen-en-la-unidad">2.1 Los cuatro pilares que aparecen en la unidad</h3>
+<ol>
+<li><strong>Recursos de hardware</strong>: servidores, almacenamiento y redes accesibles a través de Internet. Son los "ordenadores" que ejecutan el trabajo.</li>
+<li><strong>Recursos de software</strong>: bases de datos, aplicaciones y servicios disponibles en línea. Son los programas que el usuario final utiliza.</li>
+<li><strong>Beneficios ambientales</strong>: al compartir recursos entre muchos clientes, se aprovechan mejor los equipos y se reduce el consumo energético. Es una de las grandes ventajas ecológicas del cloud.</li>
+<li><strong>Modelos de negocio</strong>: nuevas formas de cobrar y提供服务 basadas en suscripción, pago por uso o freemium.</li>
+</ol>
+<h3 id="22-ejemplo-cotidiano">2.2 Ejemplo cotidiano</h3>
+<p>Cuando abres <strong>Google Drive</strong>, <strong>Netflix</strong> o <strong>Gmail</strong>, estás usando la nube:</p>
+<ul>
+<li>No hay ningún CD de instalación.</li>
+<li>Tu archivo está en un servidor de Google, no en tu disco duro.</li>
+<li>Si entras desde otro dispositivo, ves lo mismo.</li>
+<li>Google se encarga de mantener los discos, hacer copias de seguridad y que el servicio esté disponible 24/7.</li>
+</ul>
+<p>Eso <strong>es</strong> computación en la nube.</p>
+<hr />
+<h2 id="3-modelos-de-nube">3. Modelos de nube</h2>
+<p>No todas las empresas necesitan el mismo tipo de nube. Existen cuatro modelos principales que se diferencian por <strong>quién gestiona la infraestructura</strong> y <strong>dónde está ubicada</strong>.</p>
+<h3 id="31-nube-publica">3.1 Nube pública</h3>
+<p>La infraestructura es <strong>propiedad de un proveedor externo</strong> (Amazon Web Services, Microsoft Azure, Google Cloud, etc.) y se comparte entre muchos clientes a través de Internet.</p>
+<p><strong>Características principales:</strong></p>
+<ul>
+<li><strong>Acceso desde cualquier ubicación</strong>: solo se necesita una conexión a Internet.</li>
+<li><strong>Escalabilidad</strong>: se pueden aumentar o reducir los recursos (CPU, RAM, almacenamiento) en minutos, según la demanda.</li>
+<li><strong>Despliegue rápido</strong>: crear un servidor o una base de datos tarda minutos, no semanas como en la infraestructura tradicional.</li>
+</ul>
+<p><strong>Ventajas:</strong></p>
+<ul>
+<li>No requiere inversión inicial en hardware.</li>
+<li>Pago por uso (modelo <em>pay-as-you-go</em>).</li>
+<li>Mantenimiento y actualizaciones a cargo del proveedor.</li>
+<li>Alta disponibilidad geográfica (datacenters en todo el mundo).</li>
+</ul>
+<p><strong>Desventajas:</strong></p>
+<ul>
+<li>Menor control sobre los datos y la infraestructura.</li>
+<li>Dependencia del proveedor (<em>vendor lock-in</em>).</li>
+<li>Posibles problemas de cumplimiento normativo en sectores muy regulados (sanidad, banca…).</li>
+</ul>
+<p><strong>Ejemplo:</strong> una startup monta su web en AWS y, cuando un vídeo se hace viral, escala automáticamente de 2 a 50 servidores sin llamar a ningún proveedor.</p>
+<h3 id="32-nube-privada">3.2 Nube privada</h3>
+<p>La infraestructura es <strong>para uso exclusivo de una organización</strong>. Puede estar en las propias instalaciones de la empresa (<em>on-premise</em>) o en un datacenter externo dedicado.</p>
+<p><strong>Características principales:</strong></p>
+<ul>
+<li><strong>Personalización total</strong>: se adapta a las necesidades concretas de la empresa.</li>
+<li><strong>Control absoluto</strong>: la organización gestiona y dirige toda la infraestructura.</li>
+<li><strong>Responsabilidad financiera</strong>: la empresa asume todos los costes (compra de hardware, electricidad, refrigeración, personal técnico).</li>
+<li><strong>Proveedores de nube privada</strong>: VMware, OpenStack, Microsoft (con Azure Stack), etc.</li>
+</ul>
+<p><strong>Ventajas:</strong></p>
+<ul>
+<li>Máximo control sobre seguridad y datos.</li>
+<li>Cumplimiento normativo más sencillo.</li>
+<li>Personalización al detalle.</li>
+</ul>
+<p><strong>Desventajas:</strong></p>
+<ul>
+<li>Coste inicial elevado.</li>
+<li>Requiere personal cualificado para mantenerla.</li>
+<li>Escalado más lento y caro.</li>
+</ul>
+<p><strong>Ejemplo:</strong> un banco que, por regulación, no puede sacar ciertos datos de sus propios centros de datos, mantiene una nube privada con OpenStack.</p>
+<h3 id="33-nube-hibrida">3.3 Nube híbrida</h3>
+<p>Combina <strong>nube pública y nube privada</strong>, conectándolas para que trabajen juntas. Es el modelo más extendido hoy en día.</p>
+<p><strong>Características principales:</strong></p>
+<ul>
+<li><strong>Carga de trabajo equilibrada</strong>: distribuye las tareas entre la nube privada y la pública. Lo más sensible o crítico se queda en casa; lo elástico se va a la nube pública.</li>
+<li><strong>Seguridad mejorada</strong>: los datos sensibles se mantienen en el entorno privado.</li>
+<li><strong>Cumplimiento normativo</strong>: permite adherirse a regulaciones que obligan a tener ciertos datos en local.</li>
+<li><strong>Escalabilidad</strong>: cuando la nube privada se queda corta, "derramamos" (<em>cloud bursting</em>) a la pública.</li>
+</ul>
+<p><strong>Ventajas:</strong></p>
+<ul>
+<li>Lo mejor de ambos mundos.</li>
+<li>Flexibilidad para mover cargas entre entornos.</li>
+<li>Coste optimizado.</li>
+</ul>
+<p><strong>Desventajas:</strong></p>
+<ul>
+<li>Mayor complejidad de gestión.</li>
+<li>Necesidad de asegurar la conexión entre las dos nubes.</li>
+</ul>
+<p><strong>Ejemplo:</strong> una tienda online mantiene su base de datos de clientes en la nube privada (por privacidad) pero usa AWS para absorber los picos de tráfico en Black Friday.</p>
+<h3 id="34-multinube">3.4 Multinube</h3>
+<p>La organización utiliza <strong>varias nubes públicas de distintos proveedores</strong> (AWS + Azure + Google Cloud, por ejemplo). No es lo mismo que híbrida: en la híbrida hay nube privada, en la multinube todas son públicas (aunque pueden ser de distintos proveedores).</p>
+<p><strong>Características principales:</strong></p>
+<ul>
+<li><strong>Integración de nubes</strong>: herramientas y procesos para que las distintas nubes trabajen coordinadas.</li>
+<li><strong>Diversidad de proveedores</strong>: se evita depender de un único proveedor.</li>
+<li><strong>Selección de servicios</strong>: se elige el mejor servicio de cada proveedor (por ejemplo, Azure para Active Directory y AWS para S3).</li>
+<li><strong>Reducción de la dependencia</strong>: si un proveedor tiene una caída o sube precios, se puede migrar parte a otro.</li>
+</ul>
+<p><strong>Ventajas:</strong></p>
+<ul>
+<li>Aprovecha las fortalezas de cada proveedor.</li>
+<li>Reduce el <em>vendor lock-in</em>.</li>
+<li>Mayor resiliencia ante caídas.</li>
+</ul>
+<p><strong>Desventajas:</strong></p>
+<ul>
+<li>Gestión muy compleja.</li>
+<li>Costes de integración y formación.</li>
+<li>Necesidad de personal experto en varias plataformas.</li>
+</ul>
+<p><strong>Ejemplo:</strong> una gran empresa usa Azure para su Office 365, AWS para machine learning y Google Cloud para analítica de datos.</p>
+<h3 id="35-cuadro-comparativo">3.5 Cuadro comparativo</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th style="text-align: center;">Pública</th>
+<th style="text-align: center;">Privada</th>
+<th style="text-align: center;">Híbrida</th>
+<th style="text-align: center;">Multinube</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Propiedad del proveedor</td>
+<td style="text-align: center;">Externo</td>
+<td style="text-align: center;">Propia o dedicada</td>
+<td style="text-align: center;">Mixto</td>
+<td style="text-align: center;">Varios externos</td>
+</tr>
+<tr>
+<td>Inversión inicial</td>
+<td style="text-align: center;">Baja</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: center;">Media</td>
+<td style="text-align: center;">Baja</td>
+</tr>
+<tr>
+<td>Escalabilidad</td>
+<td style="text-align: center;">Muy alta</td>
+<td style="text-align: center;">Limitada</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: center;">Muy alta</td>
+</tr>
+<tr>
+<td>Control</td>
+<td style="text-align: center;">Bajo</td>
+<td style="text-align: center;">Total</td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Bajo-medio</td>
+</tr>
+<tr>
+<td>Cumplimiento normativo</td>
+<td style="text-align: center;">Limitado</td>
+<td style="text-align: center;">Alto</td>
+<td style="text-align: center;">Alto</td>
+<td style="text-align: center;">Medio</td>
+</tr>
+<tr>
+<td>Complejidad de gestión</td>
+<td style="text-align: center;">Baja</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: center;">Muy alta</td>
+</tr>
+<tr>
+<td>Riesgo de <em>lock-in</em></td>
+<td style="text-align: center;">Alto</td>
+<td style="text-align: center;">Bajo</td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Bajo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-servicios-en-la-nube-capas">4. Servicios en la nube: capas</h2>
+<p>Para entender los modelos de servicio (IaaS, PaaS, SaaS…) primero hay que saber <strong>qué capas componen un sistema informático</strong>. La presentación muestra esta pila:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flowchart BT
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    hardware["Servidores · Almacenamiento · Red&lt;br/&gt;Hardware físico"]
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    virtualizacion["Virtualización&lt;br/&gt;Permite tener varias máquinas"]
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    so["Sistema operativo&lt;br/&gt;Windows, Linux…"]
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    middleware["Software intermedio (middleware)&lt;br/&gt;Lógica de negocio, APIs"]
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    datos["Datos&lt;br/&gt;Información que se almacena"]
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    aplicaciones["Aplicaciones&lt;br/&gt;El usuario final las usa"]
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    hardware --&gt; virtualizacion --&gt; so --&gt; middleware --&gt; datos --&gt; aplicaciones
+</span></code></pre></div>
+<h3 id="41-que-gestiona-cada-parte">4.1 ¿Qué gestiona cada parte?</h3>
+<ul>
+<li><strong>Hardware físico</strong> (servidores, almacenamiento, red): los cables, discos y procesadores reales. Lo mantiene el proveedor en su datacenter.</li>
+<li><strong>Virtualización</strong>: capa software que permite dividir un servidor físico en muchos servidores virtuales. La inventaron los mainframes y hoy es la base de toda la nube.</li>
+<li><strong>Sistema operativo</strong>: Linux, Windows Server, etc. Se instala sobre la máquina virtual.</li>
+<li><strong>Middleware / software intermedio</strong>: lógica común (servidores de aplicaciones, colas de mensajes, bases de datos).</li>
+<li><strong>Datos</strong>: la información que manejan las aplicaciones.</li>
+<li><strong>Aplicaciones</strong>: lo que el usuario ve y usa.</li>
+</ul>
+<h3 id="42-la-idea-central">4.2 La idea central</h3>
+<p>Conforme vamos subiendo en la pila, <strong>más cosas se externalizan al proveedor</strong>. En IaaS, el proveedor solo nos da la base; en PaaS nos da también el sistema operativo y el middleware; en SaaS nos da la aplicación completa. Lo vemos con detalle en el siguiente apartado.</p>
+<hr />
+<h2 id="5-modelos-de-servicio-iaas-paas-saas-xaas">5. Modelos de servicio: IaaS, PaaS, SaaS, XaaS</h2>
+<p>Los modelos de servicio definen <strong>qué gestiona el proveedor y qué gestiona el cliente</strong>. Son los tres modelos clásicos (a veces se añaden más bajo el paraguas XaaS).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>flowchart LR
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    onpremise["On-premise&lt;br/&gt;Lo gestionas todo tú"]
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    iaas["IaaS&lt;br/&gt;El proveedor gestiona infraestructura"]
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    paas["PaaS&lt;br/&gt;El proveedor gestiona plataforma"]
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    saas["SaaS&lt;br/&gt;El proveedor lo gestiona todo"]
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    onpremise --&gt; iaas --&gt; paas --&gt; saas
+</span></code></pre></div>
+<h3 id="51-iaas-infrastructure-as-a-service">5.1 IaaS – Infrastructure as a Service</h3>
+<p>El proveedor ofrece <strong>infraestructura básica de computación</strong>: servidores virtuales, almacenamiento y redes. El cliente instala encima el sistema operativo, el middleware y las aplicaciones.</p>
+<p><strong>Características principales:</strong></p>
+<ul>
+<li><strong>Servidores virtuales bajo demanda</strong>: levantas un servidor Linux o Windows en minutos.</li>
+<li><strong>Almacenamiento elástico</strong>: discos que crecen o encogen según necesidad.</li>
+<li><strong>Redes definidas por software</strong>: VLANs, firewalls, balanceadores configurables.</li>
+<li><strong>Pago por uso</strong>: pagas por las horas de CPU, GB de RAM y TB de disco consumidos.</li>
+<li><strong>Control total sobre el sistema operativo</strong>: puedes instalar lo que quieras.</li>
+</ul>
+<p><strong>Ejemplos de proveedores:</strong></p>
+<ul>
+<li><strong>Amazon Web Services (AWS)</strong>: EC2, S3, VPC.</li>
+<li><strong>Microsoft Azure</strong>: Virtual Machines, Blob Storage.</li>
+<li><strong>Google Cloud Platform (GCP)</strong>: Compute Engine, Cloud Storage.</li>
+<li><strong>Proveedores europeos</strong>: OVHcloud, Hetzner Cloud, Arsys.</li>
+</ul>
+<p><strong>Cuándo elegir IaaS:</strong></p>
+<ul>
+<li>Necesitas un control total sobre el sistema operativo.</li>
+<li>Vas a migrar una aplicación legacy que no encaja en PaaS.</li>
+<li>Quieres máxima flexibilidad y estás dispuesto a asumir más trabajo de administración.</li>
+</ul>
+<h3 id="52-paas-platform-as-a-service">5.2 PaaS – Platform as a Service</h3>
+<p>El proveedor ofrece una <strong>plataforma completa para desarrollar y desplegar aplicaciones</strong>, incluyendo el sistema operativo, el middleware, las bases de datos y las herramientas de desarrollo. El cliente solo se ocupa del código de su aplicación y de los datos.</p>
+<p><strong>Características principales:</strong></p>
+<ul>
+<li><strong>Entorno de desarrollo integrado</strong>: SDK, bibliotecas, herramientas listas para usar.</li>
+<li><strong>Despliegue simplificado</strong>: subir el código y la plataforma se encarga del resto.</li>
+<li><strong>Escalado automático</strong>: si entran más usuarios, la plataforma añade recursos sola.</li>
+<li><strong>Servicios gestionados</strong>: bases de datos, colas de mensajes, caché, etc., sin que el cliente los administre.</li>
+<li><strong>Alta disponibilidad</strong>: replicación y balanceo incluidos por defecto.</li>
+</ul>
+<p><strong>Ejemplos de proveedores:</strong></p>
+<ul>
+<li><strong>Heroku</strong> (parte de Salesforce).</li>
+<li><strong>Google App Engine</strong>.</li>
+<li><strong>AWS Elastic Beanstalk</strong>, <strong>Azure App Service</strong>.</li>
+<li><strong>Vercel</strong>, <strong>Netlify</strong> (especializados en frontend).</li>
+<li><strong>Render</strong>, <strong>Fly.io</strong>.</li>
+</ul>
+<p><strong>Cuándo elegir PaaS:</strong></p>
+<ul>
+<li>Eres desarrollador y quieres centrarte en el código, no en la infraestructura.</li>
+<li>Tu aplicación es nueva y no tiene requisitos especiales de sistema operativo.</li>
+<li>Quieres iterar rápido: subir cambios y verlos en producción en minutos.</li>
+</ul>
+<h3 id="53-saas-software-as-a-service">5.3 SaaS – Software as a Service</h3>
+<p>El proveedor ofrece <strong>aplicaciones completas listas para usar</strong>, a las que el cliente accede normalmente desde un navegador web. El cliente no se preocupa de nada: ni del sistema operativo, ni del servidor, ni del mantenimiento.</p>
+<p><strong>Características principales:</strong></p>
+<ul>
+<li><strong>Acceso vía navegador o app móvil</strong>: nada que instalar.</li>
+<li><strong>Pago por suscripción</strong> (mensual/anual) o por usuario.</li>
+<li><strong>Actualizaciones automáticas</strong>: siempre se usa la última versión.</li>
+<li><strong>Multi-tenant</strong>: una sola instancia de la aplicación sirve a muchos clientes, que ven sus datos aislados.</li>
+<li><strong>Accesible desde cualquier lugar</strong> con conexión a Internet.</li>
+</ul>
+<p><strong>Ejemplos muy conocidos:</strong></p>
+<ul>
+<li><strong>Productividad</strong>: Google Workspace (Docs, Sheets, Gmail), Microsoft 365.</li>
+<li><strong>CRM</strong>: Salesforce, HubSpot.</li>
+<li><strong>Comunicación</strong>: Slack, Microsoft Teams, Zoom.</li>
+<li><strong>Almacenamiento</strong>: Dropbox, Google Drive, OneDrive.</li>
+<li><strong>Gestión de proyectos</strong>: Trello, Asana, Monday.</li>
+</ul>
+<p><strong>Cuándo elegir SaaS:</strong></p>
+<ul>
+<li>La aplicación que necesitas ya existe como servicio.</li>
+<li>No quieres (o no puedes) mantener infraestructura.</li>
+<li>Valoras el acceso desde cualquier lugar y el trabajo colaborativo.</li>
+</ul>
+<h3 id="54-xaas-anything-as-a-service">5.4 XaaS – Anything as a Service</h3>
+<p>Es un <strong>término paraguas</strong> (<em>anything as a service</em>, "cualquier cosa como servicio") que engloba todo lo que pueda entregarse bajo demanda a través de la nube. Nació como evolución natural de IaaS, PaaS y SaaS.</p>
+<p><strong>Otros "as a Service" habituales:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>Significado</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FaaS</strong></td>
+<td>Function as a Service (sin servidor / <em>serverless</em>)</td>
+<td>AWS Lambda, Azure Functions</td>
+</tr>
+<tr>
+<td><strong>DBaaS</strong></td>
+<td>Database as a Service</td>
+<td>Amazon RDS, Firebase</td>
+</tr>
+<tr>
+<td><strong>StaaS</strong></td>
+<td>Storage as a Service</td>
+<td>Dropbox, Backblaze</td>
+</tr>
+<tr>
+<td><strong>BaaS</strong></td>
+<td>Backend as a Service</td>
+<td>Firebase, Supabase</td>
+</tr>
+<tr>
+<td><strong>MaaS</strong></td>
+<td>Monitoring/ML as a Service</td>
+<td>Datadog, AWS SageMaker</td>
+</tr>
+<tr>
+<td><strong>DaaS</strong></td>
+<td>Desktop as a Service (escritorios virtuales)</td>
+<td>Citrix, Azure Virtual Desktop</td>
+</tr>
+<tr>
+<td><strong>CaaS</strong></td>
+<td>Containers as a Service</td>
+<td>Amazon ECS, Google Kubernetes Engine</td>
+</tr>
+<tr>
+<td><strong>SECaaS</strong></td>
+<td>Security as a Service</td>
+<td>Cloudflare, Snyk</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Idea clave:</strong> la tendencia es que <strong>todo</strong> se ofrezca como servicio. Esto refleja la idea central de la nube: en lugar de comprar y mantener, <strong>contratas y consumes</strong>.</p>
+</blockquote>
+<h3 id="55-comparativa-iaas-paas-saas">5.5 Comparativa IaaS / PaaS / SaaS</h3>
+<table>
+<thead>
+<tr>
+<th>Capa</th>
+<th style="text-align: center;">IaaS</th>
+<th style="text-align: center;">PaaS</th>
+<th style="text-align: center;">SaaS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aplicación</td>
+<td style="text-align: center;">Cliente</td>
+<td style="text-align: center;">Cliente</td>
+<td style="text-align: center;">Proveedor</td>
+</tr>
+<tr>
+<td>Datos</td>
+<td style="text-align: center;">Cliente</td>
+<td style="text-align: center;">Cliente</td>
+<td style="text-align: center;">Cliente</td>
+</tr>
+<tr>
+<td>Middleware</td>
+<td style="text-align: center;">Cliente</td>
+<td style="text-align: center;">Proveedor</td>
+<td style="text-align: center;">Proveedor</td>
+</tr>
+<tr>
+<td>Sistema operativo</td>
+<td style="text-align: center;">Cliente</td>
+<td style="text-align: center;">Proveedor</td>
+<td style="text-align: center;">Proveedor</td>
+</tr>
+<tr>
+<td>Virtualización</td>
+<td style="text-align: center;">Proveedor</td>
+<td style="text-align: center;">Proveedor</td>
+<td style="text-align: center;">Proveedor</td>
+</tr>
+<tr>
+<td>Hardware</td>
+<td style="text-align: center;">Proveedor</td>
+<td style="text-align: center;">Proveedor</td>
+<td style="text-align: center;">Proveedor</td>
+</tr>
+<tr>
+<td>Control</td>
+<td style="text-align: center;">Alto</td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Bajo</td>
+</tr>
+<tr>
+<td>Facilidad de uso</td>
+<td style="text-align: center;">Baja</td>
+<td style="text-align: center;">Media</td>
+<td style="text-align: center;">Alta</td>
+</tr>
+<tr>
+<td>Flexibilidad</td>
+<td style="text-align: center;">Muy alta</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: center;">Baja</td>
+</tr>
+<tr>
+<td>Para quién</td>
+<td style="text-align: center;">Sysadmins</td>
+<td style="text-align: center;">Desarrolladores</td>
+<td style="text-align: center;">Usuarios finales</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-soluciones-saas-b2b-b2c-horizontal-y-vertical">6. Soluciones SaaS: B2B, B2C, horizontal y vertical</h2>
+<p>Dentro del mundo SaaS existen dos ejes de clasificación muy útiles: <strong>a quién se vende</strong> (B2B vs B2C) y <strong>para qué sector sirve</strong> (horizontal vs vertical).</p>
+<h3 id="61-saas-b2b-business-to-business">6.1 SaaS B2B (Business to Business)</h3>
+<p>Soluciones SaaS <strong>enfocadas a servir las necesidades específicas de las empresas</strong>.</p>
+<p><strong>Características:</strong></p>
+<ul>
+<li>Pensadas para equipos de trabajo, no para usuarios individuales.</li>
+<li>Integración con otras herramientas corporativas (ERP, CRM, etc.).</li>
+<li>Modelos de precio por usuario o por uso empresarial.</li>
+<li>Cuentas con permisos, roles y auditoría.</li>
+</ul>
+<p><strong>Ejemplos:</strong></p>
+<ul>
+<li><strong>CRM</strong>: Salesforce, HubSpot CRM.</li>
+<li><strong>Marketing automation</strong>: Mailchimp, Marketo.</li>
+<li><strong>Gestión de proyectos</strong>: Asana, Monday.com, Jira.</li>
+<li><strong>RR. HH.</strong>: Workday, BambooHR.</li>
+<li><strong>Facturación y contabilidad</strong>: Holded, QuickBooks Online.</li>
+</ul>
+<h3 id="62-saas-b2c-business-to-consumer">6.2 SaaS B2C (Business to Consumer)</h3>
+<p>Soluciones SaaS <strong>enfocadas a servir directamente a consumidores finales</strong>, en su vida personal o de ocio.</p>
+<p><strong>Características:</strong></p>
+<ul>
+<li>Pensadas para un usuario individual o una familia.</li>
+<li>Interfaz muy sencilla e intuitiva.</li>
+<li>Modelos de precio freemium o por suscripción personal.</li>
+<li>Poca o nula necesidad de integraciones corporativas.</li>
+</ul>
+<p><strong>Ejemplos:</strong></p>
+<ul>
+<li><strong>Streaming de vídeo</strong>: Netflix, Disney+, HBO Max.</li>
+<li><strong>Streaming de música</strong>: Spotify, Apple Music.</li>
+<li><strong>Mensajería</strong>: WhatsApp (en parte), Telegram, Signal.</li>
+<li><strong>Almacenamiento personal</strong>: Google Drive, iCloud, Dropbox.</li>
+<li><strong>Productividad personal</strong>: Notion, Evernote.</li>
+</ul>
+<h3 id="63-saas-horizontal">6.3 SaaS Horizontal</h3>
+<p>Soluciones <strong>diseñadas para necesidades empresariales generales</strong>, aplicables a <strong>cualquier sector</strong>.</p>
+<p><strong>Características:</strong></p>
+<ul>
+<li>Resuelven problemas comunes a todas las empresas (gestionar clientes, tareas, comunicación…).</li>
+<li>Gran mercado potencial.</li>
+<li>Suelen ser configurables y personalizables.</li>
+</ul>
+<p><strong>Ejemplos:</strong></p>
+<ul>
+<li>CRM (gestión de clientes) → Salesforce, HubSpot.</li>
+<li>ERP (planificación de recursos) → Odoo, SAP Business One.</li>
+<li>Herramientas de comunicación → Slack, Microsoft Teams.</li>
+<li>Suites ofimáticas → Google Workspace, Microsoft 365.</li>
+</ul>
+<h3 id="64-saas-vertical">6.4 SaaS Vertical</h3>
+<p>Soluciones <strong>especializadas para un nicho de mercado o sector concreto</strong>, con funcionalidades adaptadas a su regulación, lenguaje y procesos específicos.</p>
+<p><strong>Características:</strong></p>
+<ul>
+<li>Conocen en profundidad el sector al que sirven.</li>
+<li>Incluyen plantillas, informes y métricas propias del nicho.</li>
+<li>Menor competencia porque el mercado es más pequeño.</li>
+<li>Precio más alto por la especialización.</li>
+</ul>
+<p><strong>Ejemplos:</strong></p>
+<ul>
+<li><strong>Sanidad</strong>: software de gestión de clínicas, historiales clínicos.</li>
+<li><strong>Educación</strong>: plataformas LMS como Moodle, plataformas de gestión de centros.</li>
+<li><strong>Hostelería</strong>: TPV en la nube como CoverManager, TheFork.</li>
+<li><strong>Legal</strong>: software para despachos de abogados (time tracking, facturación por expediente).</li>
+<li><strong>Construcción</strong>: software de presupuestos y mediciones para obras.</li>
+</ul>
+<h3 id="65-cuadro-resumen-saas">6.5 Cuadro resumen SaaS</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>B2B</th>
+<th>B2C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Horizontal</strong></td>
+<td>CRM, ERP, ofimática empresarial</td>
+<td>Streaming, correo personal</td>
+</tr>
+<tr>
+<td><strong>Vertical</strong></td>
+<td>Software para clínicas, software legal</td>
+<td>Apps de salud, apps de idiomas</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-soluciones-usando-cada-modelo">7. Soluciones usando cada modelo</h2>
+<h3 id="71-soluciones-iaas">7.1 Soluciones IaaS</h3>
+<p>Cuando contratamos IaaS, lo que obtenemos son <strong>piezas de infraestructura</strong> que nosotros configuramos.</p>
+<p><strong>1. Servicios de computación</strong></p>
+<ul>
+<li>Ofrecen recursos de procesamiento de datos: <strong>CPU</strong> y <strong>GPU</strong>.</li>
+<li>Casos de uso: ejecutar máquinas virtuales, entrenar modelos de inteligencia artificial (con GPU), levantar servidores web.</li>
+<li>Ejemplo: AWS EC2 (CPU), AWS P3 (GPU).</li>
+</ul>
+<p><strong>2. Servicios de almacenamiento</strong></p>
+<ul>
+<li>Proporcionan espacios para guardar datos en la nube.</li>
+<li>Tipos: almacenamiento de objetos (S3), de archivos (EFS), de bloques (EBS).</li>
+<li>Casos de uso: copias de seguridad, archivos multimedia, Big Data.</li>
+<li>Ejemplo: Amazon S3, Google Cloud Storage.</li>
+</ul>
+<p><strong>3. Servicios de copia de seguridad</strong></p>
+<ul>
+<li>Soluciones para proteger datos mediante <strong>backups automatizados</strong>.</li>
+<li>Permiten restaurar la información en caso de desastre.</li>
+<li>Ejemplo: AWS Backup, Azure Backup, Veeam Cloud Connect.</li>
+</ul>
+<p><strong>4. Servicios de red</strong></p>
+<ul>
+<li>Infraestructura de red en la nube para conectividad.</li>
+<li>Incluyen: VPC (redes privadas virtuales), balanceadores de carga, VPN, CDN, DNS gestionado.</li>
+<li>Ejemplo: Amazon VPC, Azure Virtual Network, Google Cloud CDN.</li>
+</ul>
+<h3 id="72-soluciones-paas">7.2 Soluciones PaaS</h3>
+<p>Cuando contratamos PaaS, el objetivo es <strong>desarrollar y desplegar aplicaciones</strong> sin preocuparnos por la infraestructura.</p>
+<p><strong>1. Gestión del ciclo de vida de aplicaciones (ALM)</strong></p>
+<ul>
+<li>Integra la <strong>planificación, desarrollo, pruebas, despliegue y mantenimiento</strong> del software.</li>
+<li>Incluye control de versiones, integración continua (CI) y despliegue continuo (CD).</li>
+<li>Ejemplo: Azure DevOps, GitLab, GitHub Actions.</li>
+</ul>
+<p><strong>2. Portales de aplicaciones</strong></p>
+<ul>
+<li>Proveen <strong>infraestructura y herramientas</strong> para desarrollar y hospedar <strong>portales web empresariales</strong>.</li>
+<li>Incluyen hosting, plantillas, autenticación y bases de datos.</li>
+<li>Ejemplo: Microsoft Power Pages, Google Sites (versión empresarial), WordPress VIP.</li>
+</ul>
+<p><strong>3. Plataformas de desarrollo de aplicaciones sin servidor (<em>serverless</em>)</strong></p>
+<ul>
+<li>Permiten desarrollar <strong>sin gestionar la infraestructura subyacente</strong>.</li>
+<li>El código se ejecuta en respuesta a eventos.</li>
+<li>Escala automáticamente con la demanda.</li>
+<li>Ejemplo: AWS Lambda, Azure Functions, Google Cloud Functions, Vercel Functions.</li>
+</ul>
+<h3 id="73-soluciones-saas">7.3 Soluciones SaaS</h3>
+<p>Las soluciones SaaS que se estudian en la unidad se agrupan en seis grandes familias:</p>
+<table>
+<thead>
+<tr>
+<th>Familia</th>
+<th>Qué resuelve</th>
+<th>Ejemplos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Software de comunicación</strong></td>
+<td>Mejoran la comunicación y colaboración en equipos</td>
+<td>Slack, Microsoft Teams, Zoom, Google Meet</td>
+</tr>
+<tr>
+<td><strong>Suites de gestión integral de empresas (ERP/CRM)</strong></td>
+<td>Soluciones completas para gestionar una empresa</td>
+<td>Salesforce, HubSpot, SAP, Odoo, Zoho</td>
+</tr>
+<tr>
+<td><strong>Paquetes de aplicaciones en la nube</strong></td>
+<td>Software empaquetado listo para usar, sin instalación</td>
+<td>Google Workspace, Microsoft 365, Adobe Creative Cloud</td>
+</tr>
+<tr>
+<td><strong>Gestión empresarial</strong></td>
+<td>Software para gestionar y analizar la información de la empresa</td>
+<td>ERP como SAP, Oracle Cloud, NetSuite</td>
+</tr>
+<tr>
+<td><strong>Marketing</strong></td>
+<td>Herramientas para la gestión y análisis de marketing</td>
+<td>HubSpot Marketing, Mailchimp, Google Analytics, Hootsuite</td>
+</tr>
+<tr>
+<td><strong>Gestión de proyectos</strong></td>
+<td>Servicios para la planificación y seguimiento de proyectos</td>
+<td>Trello, Asana, Monday.com, Jira, ClickUp</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-edge-fog-y-mist-computing">8. Edge, Fog y Mist Computing</h2>
+<p>A medida que Internet de las Cosas (IoT) y los dispositivos conectados se multiplican, surge un problema: <strong>no toda la información puede (o debe) viajar hasta la nube central</strong>. Necesitamos procesar datos <strong>cerca de donde se generan</strong>.</p>
+<p>Aparecen entonces tres modelos complementarios al cloud tradicional:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>flowchart BT
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    mist["MIST COMPUTING (Rocío)&lt;br/&gt;Procesamiento en los propios sensores/actuadores"]
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    edge["EDGE COMPUTING (Borde)&lt;br/&gt;Procesamiento en el dispositivo o muy cerca"]
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    fog["FOG COMPUTING (Niebla)&lt;br/&gt;Capa intermedia: gateways, routers industriales"]
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    cloud["CLOUD (Nube)&lt;br/&gt;Procesamiento pesado, históricos, analítica"]
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    mist --&gt; edge --&gt; fog --&gt; cloud
+</span></code></pre></div>
+<h3 id="81-edge-computing">8.1 Edge Computing</h3>
+<p><strong>Definición:</strong> el procesamiento se realiza <strong>en el extremo de la red</strong>, lo más cerca posible del dispositivo que genera los datos.</p>
+<ul>
+<li>Reduce la latencia (los datos no tienen que viajar a un datacenter lejano).</li>
+<li>Disminuye el uso de ancho de banda.</li>
+<li>Permite operar aunque la conexión a Internet falle.</li>
+<li>Casos de uso: coches autónomos, cámaras inteligentes, robots industriales, farolas inteligentes.</li>
+</ul>
+<p><strong>Ejemplo:</strong> una cámara de seguridad con IA que detecta intrusos y envía solo las alertas, no el vídeo entero.</p>
+<h3 id="82-fog-computing">8.2 Fog Computing</h3>
+<p><strong>Definición:</strong> es una <strong>capa intermedia</strong> entre el edge y la nube. El procesamiento se reparte entre dispositivos edge y una infraestructura local (gateways, routers industriales, servidores locales).</p>
+<ul>
+<li>Nodo central coordinador: recoge datos de muchos dispositivos edge.</li>
+<li>Aplica reglas y preprocesa la información antes de enviarla a la nube.</li>
+<li>Muy usado en industria 4.0, smart cities y agricultura de precisión.</li>
+<li>Estándar de referencia: <strong>OpenFog Consortium</strong> (ahora parte de la Industrial Internet Consortium).</li>
+</ul>
+<p><strong>Ejemplo:</strong> en una fábrica inteligente, los sensores de cada máquina envían datos a un gateway local (fog), que detecta anomalías y solo envía a la nube los eventos relevantes.</p>
+<h3 id="83-mist-computing">8.3 Mist Computing</h3>
+<p><strong>Definición:</strong> lleva el procesamiento <strong>al extremo absoluto</strong>: a los propios sensores y microcontroladores. Es la capa más cercana al dato.</p>
+<ul>
+<li>Requiere dispositivos muy pequeños y de bajo consumo.</li>
+<li>Apto para redes de sensores masivas (WSN – Wireless Sensor Networks).</li>
+<li>Limitado en capacidad: solo ejecuta lógica muy sencilla.</li>
+</ul>
+<p><strong>Ejemplo:</strong> un sensor de temperatura que, además de medir, puede decidir por sí mismo si la lectura supera un umbral y avisar al gateway sin esperar instrucciones.</p>
+<h3 id="84-cuadro-comparativo">8.4 Cuadro comparativo</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th style="text-align: center;">Cloud</th>
+<th style="text-align: center;">Fog</th>
+<th style="text-align: center;">Edge</th>
+<th style="text-align: center;">Mist</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ubicación del procesamiento</td>
+<td style="text-align: center;">Datacenter lejano</td>
+<td style="text-align: center;">Red local</td>
+<td style="text-align: center;">Dispositivo o muy cerca</td>
+<td style="text-align: center;">Sensor/microcontrolador</td>
+</tr>
+<tr>
+<td>Latencia</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: center;">Media</td>
+<td style="text-align: center;">Baja</td>
+<td style="text-align: center;">Muy baja</td>
+</tr>
+<tr>
+<td>Capacidad de cómputo</td>
+<td style="text-align: center;">Muy alta</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: center;">Media</td>
+<td style="text-align: center;">Muy baja</td>
+</tr>
+<tr>
+<td>Almacenamiento</td>
+<td style="text-align: center;">Ilimitado (en la práctica)</td>
+<td style="text-align: center;">Grande</td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Mínimo</td>
+</tr>
+<tr>
+<td>Conectividad</td>
+<td style="text-align: center;">Siempre online</td>
+<td style="text-align: center;">A veces</td>
+<td style="text-align: center;">A veces</td>
+<td style="text-align: center;">A veces</td>
+</tr>
+<tr>
+<td>Casos típicos</td>
+<td style="text-align: center;">Big Data, IA pesada</td>
+<td style="text-align: center;">Industria 4.0</td>
+<td style="text-align: center;">Coches, robots</td>
+<td style="text-align: center;">Sensores IoT</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Idea clave:</strong> estas tres capas <strong>no sustituyen a la nube</strong>, la complementan. La nube sigue siendo el lugar donde se almacenan historiales y se entrenan modelos; edge, fog y mist permiten <strong>reaccionar en tiempo real</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="9-impacto-de-la-computacion-en-la-nube-en-la-rentabilidad-de-una-empresa">9. Impacto de la computación en la nube en la rentabilidad de una empresa</h2>
+<p>La unidad cierra con un mapa conceptual que resume las ventajas económicas y estratégicas de la nube para una empresa. Las organizamos en cuatro grandes bloques.</p>
+<h3 id="91-acceso-a-tecnologia-avanzada">9.1 Acceso a tecnología avanzada</h3>
+<ul>
+<li><strong>Innovación sin coste inicial</strong>: se pueden probar servicios punteros (IA, blockchain, analítica avanzada) sin comprar hardware.</li>
+<li><strong>Mantenimiento automático</strong>: el proveedor actualiza, parchea y mantiene los sistemas.</li>
+<li><strong>Últimas capacidades tecnológicas disponibles</strong>: cualquier empresa, grande o pequeña, accede a la misma tecnología que usan los gigantes.</li>
+<li><strong>Actualizaciones incluidas</strong>: siempre se trabaja con la última versión.</li>
+</ul>
+<h3 id="92-reduccion-de-costes-operativos">9.2 Reducción de costes operativos</h3>
+<ul>
+<li><strong>Modelo de costes eficiente</strong>: se paga solo por lo que se consume.</li>
+<li><strong>Pago por consumo</strong>: como la luz o el agua.</li>
+<li><strong>Externalización de infraestructura</strong>: el datacenter ya no es "problema" de la empresa.</li>
+<li><strong>Eliminación de inversiones iniciales</strong>: no hace falta comprar servidores por adelantado.</li>
+<li><strong>Reducción de gastos de gestión</strong>: menos personal dedicado a mantener hardware.</li>
+</ul>
+<h3 id="93-escalabilidad-y-adaptabilidad">9.3 Escalabilidad y adaptabilidad</h3>
+<ul>
+<li><strong>Adaptación a la demanda</strong>: recursos que crecen y decrecen según la necesidad.</li>
+<li><strong>Gestión de picos de carga</strong>: Black Friday, eventos virales, campañas de marketing, etc.</li>
+<li><strong>Eficiencia operativa</strong>: ajustar capacidad a la carga real evita sobrecostes.</li>
+<li><strong>Acceso a tecnologías avanzadas</strong> sin tener que dominar su mantenimiento.</li>
+<li><strong>Optimización de recursos</strong>: nada está infrautilizado.</li>
+</ul>
+<h3 id="94-focalizacion-en-la-innovacion">9.4 Focalización en la innovación</h3>
+<ul>
+<li><strong>Implementación rápida</strong>: nuevos proyectos en horas, no en meses.</li>
+<li><strong>Ventaja competitiva</strong>: la empresa se centra en su negocio principal (<em>core business</em>) y deja la infraestructura en manos de expertos.</li>
+<li><strong>Flexibilidad de pago por uso</strong>: el coste se adapta a los ingresos.</li>
+<li><strong>Adaptación a ingresos</strong>: en meses malos, los costes cloud bajan; en meses buenos, suben.</li>
+<li><strong>Evitar compromisos a largo plazo</strong>: nada de inversiones en hardware que se quedan obsoletos.</li>
+<li><strong>Concentración en el Core Business</strong>: la empresa invierte tiempo y dinero en lo que sabe hacer, no en mantener servidores.</li>
+<li><strong>Mejora de la eficiencia global</strong>: todos los puntos anteriores se traducen en una empresa más rentable.</li>
+</ul>
+<h3 id="95-resumen-visual">9.5 Resumen visual</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>flowchart TD
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    cloud["Computación en la nube"]
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    cloud --&gt; tecnologia["Tecnología avanzada"]
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    cloud --&gt; costes["Costes operativos"]
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    cloud --&gt; negocio["Negocio e innovación"]
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    tecnologia --&gt; ia["IA sin coste inicial"]
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    tecnologia --&gt; inversion["Sin inversión inicial"]
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    tecnologia --&gt; actualizaciones["Actualizaciones incluidas"]
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    tecnologia --&gt; mantenimiento["Mantenimiento automático"]
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    costes --&gt; pago["Pago por uso"]
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    costes --&gt; capex["Sin CAPEX"]
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    costes --&gt; sinmantenimiento["Sin mantenimiento de infraestructura"]
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    costes --&gt; gestion["Menos gestión"]
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    costes --&gt; consumo["Pago por consumo"]
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    negocio --&gt; rapidez["Implementación rápida"]
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    negocio --&gt; ventaja["Ventaja competitiva"]
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    negocio --&gt; flexibilidad["Flexibilidad"]
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    negocio --&gt; core["Core Business"]
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    negocio --&gt; adaptacion["Adaptación a los ingresos"]
+</span></code></pre></div>
+<hr />
+<h2 id="10-conclusiones">10. Conclusiones</h2>
+<ol>
+<li>
+<p><strong>Existen diferentes modelos de computación en la nube, cada uno con sus ventajas y aplicaciones según las necesidades de cada organización</strong>: pública, privada, híbrida y multinube. Elegir uno u otro depende del equilibrio entre control, coste, escalabilidad y cumplimiento normativo.</p>
+</li>
+<li>
+<p><strong>Los modelos Edge Computing, y sus variantes Fog Computing y Mist Computing, complementan el modelo tradicional de nube</strong>: no lo sustituyen, sino que llevan el procesamiento allí donde se generan los datos, reduciendo latencia y consumo de ancho de banda.</p>
+</li>
+<li>
+<p><strong>La adopción de la nube impacta directamente en la rentabilidad empresarial</strong>: reduce costes, mejora la eficiencia, libera recursos para la innovación y permite escalar con agilidad.</p>
+</li>
+<li>
+<p><strong>La clave está en elegir el modelo adecuado para cada caso</strong>: no hay una solución única. Una pyme, un banco y una startup de IA tienen necesidades muy distintas. Lo importante es entender las opciones y combinarlas con criterio.</p>
+</li>
+</ol>
+<hr />
+<h2 id="11-glosario-de-terminos">11. Glosario de términos</h2>
+<ul>
+<li><strong>BaaS (Backend as a Service)</strong>: servicios backend listos para usar (autenticación, bases de datos, notificaciones) sin tener que programarlos.</li>
+<li><strong>Cloud bursting</strong>: técnica híbrida que "derrama" carga a la nube pública cuando la privada se queda corta.</li>
+<li><strong>Cloud computing</strong>: modelo de computación basado en el acceso bajo demanda, a través de Internet, a recursos compartidos configurables.</li>
+<li><strong>CRM (Customer Relationship Management)</strong>: software para gestionar la relación con los clientes.</li>
+<li><strong>DevOps</strong>: conjunto de prácticas que unen desarrollo (Dev) y operaciones (Ops) para entregar software más rápido y fiable.</li>
+<li><strong>FaaS (Function as a Service)</strong>: modelo <em>serverless</em> donde se ejecutan funciones individuales en respuesta a eventos.</li>
+<li><strong>IaaS (Infrastructure as a Service)</strong>: el proveedor ofrece infraestructura (servidores, almacenamiento, red) y el cliente gestiona el resto.</li>
+<li><strong>Latencia</strong>: tiempo que tarda un dato en viajar desde el origen hasta su destino.</li>
+<li><strong>Multi-tenant</strong>: arquitectura donde una sola instancia de software sirve a varios clientes, con sus datos aislados.</li>
+<li><strong>NIST</strong>: National Institute of Standards and Technology (EE. UU.). Publicó la definición canónica de cloud computing.</li>
+<li><strong>PaaS (Platform as a Service)</strong>: el proveedor ofrece una plataforma completa para desarrollar y desplegar aplicaciones.</li>
+<li><strong>Pay-as-you-go</strong>: modelo de pago por uso real, sin compromisos a largo plazo.</li>
+<li><strong>SaaS (Software as a Service)</strong>: aplicaciones completas listas para usar, accesibles desde el navegador.</li>
+<li><strong>Serverless</strong>: modelo donde el desarrollador solo escribe el código; el proveedor ejecuta y escala automáticamente.</li>
+<li><strong>Vendor lock-in</strong>: dependencia excesiva de un proveedor tecnológico que dificulta migrar a otro.</li>
+<li><strong>Virtualización</strong>: técnica que permite ejecutar varios "ordenadores virtuales" sobre un único equipo físico.</li>
+<li><strong>XaaS (Anything as a Service)</strong>: término paraguas que engloba cualquier cosa entregada como servicio en la nube.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Nota para el alumnado:</strong> estos apuntes amplían la presentación de la UD3 con definiciones, ejemplos y cuadros comparativos. Se recomienda combinar este material con la documentación de la presentación así como la documentación oficial de proveedores en la nube (AWS, Azure, Google Cloud) para profundizar en cada modelo y servicio.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["navigation.instant","navigation.instant","navigation.instant.progress","navigation.tabs","navigation.expand","navigation.path","toc.follow","navigation.top","content.footnote.tooltips"],"redirect":null,"search":"../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copiado al portapapeles","clipboard.copy":"Copiar al portapapeles","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 más en esta página","search.result.more.other":"# más en esta página","search.result.none":"No se encontraron documentos","search.result.one":"1 documento encontrado","search.result.other":"# documentos encontrados","search.result.placeholder":"Teclee para comenzar búsqueda","search.result.term.missing":"Falta","select.version":"Seleccionar versión"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8b1c90bd.min.js"></script>
+      
+    
+  </body>
+</html>

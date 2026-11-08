@@ -1,0 +1,5549 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://raul-profesor.github.io/digitalizacion/UD4/">
+      
+      
+        <link rel="prev" href="../UD3/">
+      
+      
+        <link rel="next" href="../UD5.md">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.69">
+    
+    
+      
+        <title>UD4: INTELIGENCIA ARTIFICIAL - Digitalización aplicada al sector productivo</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.e15858d4.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b27955a4.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-book-open%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%205v16M20.001%2019A2%202%200%200%200%2022%2017V5a2%202%200%200%200-1.999-2L16%203.002A5%205%200%200%200%2012%205a5%205%200%200%200-4-2H4a2%202%200%200%200-2%202v12a2%202%200%200%200%201.999%202H8a5%205%200%200%201%204%202%205%205%200%200%201%204-2z%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-bug%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%2020v-9M14%207a4%204%200%200%201%204%204v3a6%206%200%200%201-12%200v-3a4%204%200%200%201%204-4zM14.12%203.88%2016%202%22/%3E%3Cpath%20d%3D%22M21%2021a4%204%200%200%200-3.81-4M21%205a4%204%200%200%201-3.55%203.97M22%2013h-4M3%2021a4%204%200%200%201%203.81-4M3%205a4%204%200%200%200%203.55%203.97M6%2013H2M8%202l1.88%201.88M9%207.13V6a3%203%200%201%201%206%200v1.13%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-shield-alert%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M20%2013c0%205-3.5%207.5-7.66%208.95a1%201%200%200%201-.67-.01C7.5%2020.5%204%2018%204%2013V6a1%201%200%200%201%201-1c2%200%204.5-1.2%206.24-2.72a1.17%201.17%200%200%201%201.52%200C14.51%203.81%2017%205%2019%205a1%201%200%200%201%201%201zM12%208v4M12%2016h.01%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-flask-conical%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M14%202v6a2%202%200%200%200%20.245.96l5.51%2010.08A2%202%200%200%201%2018%2022H6a2%202%200%200%201-1.755-2.96l5.51-10.08A2%202%200%200%200%2010%208V2M6.453%2015h11.094M8.5%202h7%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-circle-x%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22/%3E%3Cpath%20d%3D%22m15%209-6%206M9%209l6%206%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-info%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22/%3E%3Cpath%20d%3D%22M12%2016v-4M12%208h.01%22/%3E%3C/svg%3E');--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-notebook%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M2%206h4M2%2010h4M2%2014h4M2%2018h4%22/%3E%3Crect%20width%3D%2216%22%20height%3D%2220%22%20x%3D%224%22%20y%3D%222%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M16%202v20%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-circle-help%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22/%3E%3Cpath%20d%3D%22M9.09%209a3%203%200%200%201%205.83%201c0%202-3%203-3%203M12%2017h.01%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-quote%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M16%203a2%202%200%200%200-2%202v6a2%202%200%200%200%202%202%201%201%200%200%201%201%201v1a2%202%200%200%201-2%202%201%201%200%200%200-1%201v2a1%201%200%200%200%201%201%206%206%200%200%200%206-6V5a2%202%200%200%200-2-2zM5%203a2%202%200%200%200-2%202v6a2%202%200%200%200%202%202%201%201%200%200%201%201%201v1a2%202%200%200%201-2%202%201%201%200%200%200-1%201v2a1%201%200%200%200%201%201%206%206%200%200%200%206-6V5a2%202%200%200%200-2-2z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-circle-check%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22/%3E%3Cpath%20d%3D%22m16%209-5.5%205.5L8%2012%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-lightbulb%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M15%2014c.2-1%20.7-1.7%201.5-2.5%201-.9%201.5-2.2%201.5-3.5A6%206%200%200%200%206%208c0%201%20.2%202.2%201.5%203.5.7.7%201.3%201.5%201.5%202.5M9%2018h6M10%2022h4%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20class%3D%22lucide%20lucide-triangle-alert%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m21.73%2018-8-14a2%202%200%200%200-3.48%200l-8%2014A2%202%200%200%200%204%2021h16a2%202%200%200%200%201.73-3M12%209v4M12%2017h.01%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Saltar a contenido
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="./.." title="Digitalización aplicada al sector productivo" class="md-header__button md-logo" aria-label="Digitalización aplicada al sector productivo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navegación">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Digitalización aplicada al sector productivo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD4: INTELIGENCIA ARTIFICIAL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Buscar">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Buscar">
+  <button type="button" class="md-search__button">
+    Buscar
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../UD1/" class="md-tabs__link">
+          
+  
+  Unidad1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../UD2/" class="md-tabs__link">
+          
+  
+  Unidad2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../UD3/" class="md-tabs__link">
+          
+  
+  Unidad3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="././" class="md-tabs__link">
+          
+  
+  Unidad4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../UD5.md" class="md-tabs__link">
+          
+  
+  Unidad5
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../UD6.md" class="md-tabs__link">
+          
+  
+  Unidad6
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Digitalización aplicada al sector productivo" class="md-nav__button md-logo" aria-label="Digitalización aplicada al sector productivo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    Digitalización aplicada al sector productivo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unidad1
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Unidad1
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  UD 1 — DIGITALIZACIÓN EN LOS SISTEMAS PRODUCTIVOS
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unidad2
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Unidad2
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  UD 2 — TECNOLOGÍAS HABILITADORAS DIGITALES (THD)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unidad3
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Unidad3
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  UD3 – Computación en la nube
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unidad4
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Unidad4
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  UD4: INTELIGENCIA ARTIFICIAL
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  UD4: INTELIGENCIA ARTIFICIAL
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apuntes-extendidos-digitalizacion-para-el-sector-productivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Apuntes Extendidos - Digitalización para el Sector Productivo
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-1-contextualizacion-de-la-inteligencia-artificial" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 1: CONTEXTUALIZACIÓN DE LA INTELIGENCIA ARTIFICIAL
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 1: CONTEXTUALIZACIÓN DE LA INTELIGENCIA ARTIFICIAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-introduccion-y-panorama-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.1. Introducción y panorama actual
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-la-situacion-de-la-ia-en-espana-y-europa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.2. La situación de la IA en España y Europa
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-impacto-en-la-productividad-empresarial" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.3. Impacto en la productividad empresarial
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-2-fundamentos-conceptuales-de-la-inteligencia-artificial" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 2: FUNDAMENTOS CONCEPTUALES DE LA INTELIGENCIA ARTIFICIAL
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 2: FUNDAMENTOS CONCEPTUALES DE LA INTELIGENCIA ARTIFICIAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-definicion-rigurosa-de-inteligencia-artificial" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.1. Definición rigurosa de Inteligencia Artificial
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-caracteristicas-distintivas-de-los-sistemas-de-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.2. Características distintivas de los sistemas de IA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-diferencia-entre-ia-machine-learning-y-deep-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.3. Diferencia entre IA, Machine Learning y Deep Learning
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-aplicaciones-cotidianas-de-la-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.4. Aplicaciones cotidianas de la IA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-3-taxonomia-de-la-inteligencia-artificial" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 3: TAXONOMÍA DE LA INTELIGENCIA ARTIFICIAL
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 3: TAXONOMÍA DE LA INTELIGENCIA ARTIFICIAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-clasificacion-por-capacidad-ia-estrecha-general-y-superinteligente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.1. Clasificación por capacidad: IA Estrecha, General y Superinteligente
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Clasificación por capacidad: IA Estrecha, General y Superinteligente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-ia-estrecha-weak-ai-o-narrow-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.1.1. IA Estrecha (Weak AI o Narrow AI)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-ia-general-strong-ai-o-agi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.1.2. IA General (Strong AI o AGI)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-ia-superinteligente-super-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.1.3. IA Superinteligente (Super AI)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-clasificacion-por-metodologia-y-funcionalidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.2. Clasificación por metodología y funcionalidad
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Clasificación por metodología y funcionalidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sistemas-reactivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sistemas Reactivos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sistemas-con-memoria-limitada" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sistemas con Memoria Limitada
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sistemas-con-teoria-de-la-mente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sistemas con Teoría de la Mente
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sistemas-con-autoconciencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sistemas con Autoconciencia
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-paradigmas-de-aprendizaje-en-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.3. Paradigmas de aprendizaje en IA
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Paradigmas de aprendizaje en IA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aprendizaje-supervisado" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Aprendizaje Supervisado
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aprendizaje-no-supervisado" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Aprendizaje No Supervisado
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aprendizaje-por-refuerzo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Aprendizaje por Refuerzo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-4-aprendizaje-automatico-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 4: APRENDIZAJE AUTOMÁTICO (MACHINE LEARNING)
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 4: APRENDIZAJE AUTOMÁTICO (MACHINE LEARNING)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-conceptos-fundamentales-del-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.1. Conceptos fundamentales del Machine Learning
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-componentes-de-un-sistema-de-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.2. Componentes de un sistema de Machine Learning
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-el-proceso-de-desarrollo-de-un-modelo-de-ml" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.3. El proceso de desarrollo de un modelo de ML
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. El proceso de desarrollo de un modelo de ML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-definicion-del-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 1: Definición del problema
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-recopilacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 2: Recopilación de datos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-exploracion-y-preparacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 3: Exploración y preparación de datos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-ingenieria-de-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 4: Ingeniería de features
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5-seleccion-del-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 5: Selección del modelo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6-entrenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 6: Entrenamiento
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-7-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 7: Evaluación
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-8-despliegue-e-monitorizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 8: Despliegue e monitorización
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-tecnicas-principales-de-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.4. Técnicas principales de Machine Learning
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4. Técnicas principales de Machine Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-regresion-lineal-y-logistica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.4.1. Regresión Lineal y Logística
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-arboles-de-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.4.2. Árboles de Decisión
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#443-random-forest-bosques-aleatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.4.3. Random Forest (Bosques Aleatorios)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#444-support-vector-machines-svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.4.4. Support Vector Machines (SVM)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-aplicaciones-del-machine-learning-en-el-sector-productivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.5. Aplicaciones del Machine Learning en el sector productivo
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5. Aplicaciones del Machine Learning en el sector productivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prediccion-de-demanda" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Predicción de demanda
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deteccion-de-fraude" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Detección de fraude
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mantenimiento-predictivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mantenimiento predictivo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segmentacion-de-clientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Segmentación de clientes
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-5-aprendizaje-profundo-deep-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 5: APRENDIZAJE PROFUNDO (DEEP LEARNING)
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 5: APRENDIZAJE PROFUNDO (DEEP LEARNING)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-introduccion-a-las-redes-neuronales-profundas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.1. Introducción a las redes neuronales profundas
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-inspiracion-biologica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.2. Inspiración biológica
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-arquitectura-de-una-red-neuronal" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.3. Arquitectura de una red neuronal
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3. Arquitectura de una red neuronal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Estructura básica
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexiones-y-pesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Conexiones y pesos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-funcionamiento-forward-propagation-y-backpropagation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.4. Funcionamiento: forward propagation y backpropagation
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4. Funcionamiento: forward propagation y backpropagation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forward-propagation-propagacion-hacia-adelante" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Forward propagation (propagación hacia adelante)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backpropagation-propagacion-hacia-atras" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Backpropagation (propagación hacia atrás)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-tipos-de-redes-neuronales-profundas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.5. Tipos de redes neuronales profundas
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.5. Tipos de redes neuronales profundas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redes-neuronales-convolucionales-cnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Redes Neuronales Convolucionales (CNN)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redes-neuronales-recurrentes-rnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Redes Neuronales Recurrentes (RNN)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Transformers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-ventajas-y-limitaciones-del-deep-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.6. Ventajas y limitaciones del Deep Learning
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.6. Ventajas y limitaciones del Deep Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ventajas
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Limitaciones
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-6-tratamiento-de-datos-en-inteligencia-artificial" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 6: TRATAMIENTO DE DATOS EN INTELIGENCIA ARTIFICIAL
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 6: TRATAMIENTO DE DATOS EN INTELIGENCIA ARTIFICIAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-el-dato-como-pilar-fundamental" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.1. El dato como pilar fundamental
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-el-ciclo-de-vida-de-los-datos-en-proyectos-de-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.2. El ciclo de vida de los datos en proyectos de IA
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2. El ciclo de vida de los datos en proyectos de IA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recopilacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Recopilación
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Almacenamiento
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limpieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Limpieza
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Transformación
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis-exploratorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Análisis exploratorio
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelado" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Modelado
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Despliegue
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitorizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Monitorización
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-calidad-del-dato" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.3. Calidad del dato
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3. Calidad del dato">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimensiones-de-la-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Dimensiones de la calidad
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-aspectos-criticos-del-tratamiento-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.4. Aspectos críticos del tratamiento de datos
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4. Aspectos críticos del tratamiento de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641-privacidad-y-proteccion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.4.1. Privacidad y protección de datos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#642-sesgos-algoritmicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.4.2. Sesgos algorítmicos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#643-seguridad-y-ciberseguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.4.3. Seguridad y ciberseguridad
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#644-explicabilidad-y-transparencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.4.4. Explicabilidad y transparencia
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-7-mineria-de-datos-data-mining" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 7: MINERÍA DE DATOS (DATA MINING)
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 7: MINERÍA DE DATOS (DATA MINING)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-concepto-y-alcance" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.1. Concepto y alcance
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-el-proceso-kdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.2. El proceso KDD
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-tipos-de-mineria-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.3. Tipos de minería de datos
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3. Tipos de minería de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#731-mineria-de-datos-descriptiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.3.1. Minería de datos descriptiva
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732-mineria-de-datos-predictiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.3.2. Minería de datos predictiva
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#733-mineria-de-texto-text-mining" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.3.3. Minería de texto (Text Mining)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#734-mineria-web-web-mining" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.3.4. Minería web (Web Mining)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-aplicaciones-sectoriales-en-espana" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.4. Aplicaciones sectoriales en España
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4. Aplicaciones sectoriales en España">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sector-tecnologico" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sector tecnológico
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#telecomunicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Telecomunicaciones
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#energia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Energía
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicios-financieros" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Servicios financieros
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salud" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Salud
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-8-integracion-de-la-ia-con-otras-tecnologias-habilitadoras" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 8: INTEGRACIÓN DE LA IA CON OTRAS TECNOLOGÍAS HABILITADORAS
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 8: INTEGRACIÓN DE LA IA CON OTRAS TECNOLOGÍAS HABILITADORAS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-la-ia-como-tecnologia-convergente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.1. La IA como tecnología convergente
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-ia-y-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.2. IA y Big Data
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-ia-e-internet-de-las-cosas-iot" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.3. IA e Internet de las Cosas (IoT)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-ia-y-cloud-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.4. IA y Cloud Computing
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85-ia-y-blockchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.5. IA y Blockchain
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#86-ia-y-robotica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.6. IA y Robótica
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#87-ia-y-realidad-aumentadavirtual" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.7. IA y Realidad Aumentada/Virtual
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-9-tendencias-actuales-y-futuro-de-la-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 9: TENDENCIAS ACTUALES Y FUTURO DE LA IA
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 9: TENDENCIAS ACTUALES Y FUTURO DE LA IA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-ia-agentica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.1. IA Agéntica
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-ia-multimodal" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.2. IA Multimodal
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-ia-explicable-xai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.3. IA Explicable (XAI)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-etica-y-gobernanza-de-la-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.4. Ética y Gobernanza de la IA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-10-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 10: CONCLUSIONES
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 10: CONCLUSIONES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-la-ia-aprende-a-partir-de-datos-mediante-modelos-de-aprendizaje-automatico-y-profundo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.1. La IA aprende a partir de datos mediante modelos de aprendizaje automático y profundo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-existen-tres-tipos-de-ia-siendo-la-ia-estrecha-la-unica-presente-en-la-actualidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.2. Existen tres tipos de IA, siendo la IA estrecha la única presente en la actualidad
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-el-procesamiento-de-datos-es-clave-en-la-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.3. El procesamiento de datos es clave en la IA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#104-la-mineria-de-datos-extrae-patrones-y-conocimiento-util" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.4. La minería de datos extrae patrones y conocimiento útil
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#105-la-ia-se-integra-con-otras-tecnologias-habilitadoras-digitales" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.5. La IA se integra con otras tecnologías habilitadoras digitales
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#106-la-adopcion-de-ia-en-espana-esta-en-expansion-significativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.6. La adopción de IA en España está en expansión significativa
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#107-la-ia-no-sustituye-el-talento-humano-lo-potencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.7. La IA no sustituye el talento humano, lo potencia
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#108-la-adopcion-responsable-de-ia-es-imprescindible" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.8. La adopción responsable de IA es imprescindible
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glosario-de-terminos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        GLOSARIO DE TÉRMINOS
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        FUENTES
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unidad5
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Unidad5
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD5.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  none
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unidad6
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Unidad6
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD6.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  none
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apuntes-extendidos-digitalizacion-para-el-sector-productivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Apuntes Extendidos - Digitalización para el Sector Productivo
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-1-contextualizacion-de-la-inteligencia-artificial" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 1: CONTEXTUALIZACIÓN DE LA INTELIGENCIA ARTIFICIAL
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 1: CONTEXTUALIZACIÓN DE LA INTELIGENCIA ARTIFICIAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-introduccion-y-panorama-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.1. Introducción y panorama actual
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-la-situacion-de-la-ia-en-espana-y-europa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.2. La situación de la IA en España y Europa
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-impacto-en-la-productividad-empresarial" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.3. Impacto en la productividad empresarial
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-2-fundamentos-conceptuales-de-la-inteligencia-artificial" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 2: FUNDAMENTOS CONCEPTUALES DE LA INTELIGENCIA ARTIFICIAL
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 2: FUNDAMENTOS CONCEPTUALES DE LA INTELIGENCIA ARTIFICIAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-definicion-rigurosa-de-inteligencia-artificial" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.1. Definición rigurosa de Inteligencia Artificial
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-caracteristicas-distintivas-de-los-sistemas-de-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.2. Características distintivas de los sistemas de IA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-diferencia-entre-ia-machine-learning-y-deep-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.3. Diferencia entre IA, Machine Learning y Deep Learning
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-aplicaciones-cotidianas-de-la-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.4. Aplicaciones cotidianas de la IA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-3-taxonomia-de-la-inteligencia-artificial" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 3: TAXONOMÍA DE LA INTELIGENCIA ARTIFICIAL
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 3: TAXONOMÍA DE LA INTELIGENCIA ARTIFICIAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-clasificacion-por-capacidad-ia-estrecha-general-y-superinteligente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.1. Clasificación por capacidad: IA Estrecha, General y Superinteligente
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Clasificación por capacidad: IA Estrecha, General y Superinteligente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-ia-estrecha-weak-ai-o-narrow-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.1.1. IA Estrecha (Weak AI o Narrow AI)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-ia-general-strong-ai-o-agi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.1.2. IA General (Strong AI o AGI)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-ia-superinteligente-super-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.1.3. IA Superinteligente (Super AI)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-clasificacion-por-metodologia-y-funcionalidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.2. Clasificación por metodología y funcionalidad
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Clasificación por metodología y funcionalidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sistemas-reactivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sistemas Reactivos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sistemas-con-memoria-limitada" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sistemas con Memoria Limitada
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sistemas-con-teoria-de-la-mente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sistemas con Teoría de la Mente
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sistemas-con-autoconciencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sistemas con Autoconciencia
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-paradigmas-de-aprendizaje-en-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.3. Paradigmas de aprendizaje en IA
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Paradigmas de aprendizaje en IA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aprendizaje-supervisado" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Aprendizaje Supervisado
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aprendizaje-no-supervisado" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Aprendizaje No Supervisado
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aprendizaje-por-refuerzo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Aprendizaje por Refuerzo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-4-aprendizaje-automatico-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 4: APRENDIZAJE AUTOMÁTICO (MACHINE LEARNING)
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 4: APRENDIZAJE AUTOMÁTICO (MACHINE LEARNING)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-conceptos-fundamentales-del-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.1. Conceptos fundamentales del Machine Learning
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-componentes-de-un-sistema-de-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.2. Componentes de un sistema de Machine Learning
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-el-proceso-de-desarrollo-de-un-modelo-de-ml" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.3. El proceso de desarrollo de un modelo de ML
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. El proceso de desarrollo de un modelo de ML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-definicion-del-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 1: Definición del problema
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-recopilacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 2: Recopilación de datos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-exploracion-y-preparacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 3: Exploración y preparación de datos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-ingenieria-de-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 4: Ingeniería de features
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5-seleccion-del-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 5: Selección del modelo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6-entrenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 6: Entrenamiento
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-7-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 7: Evaluación
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-8-despliegue-e-monitorizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paso 8: Despliegue e monitorización
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-tecnicas-principales-de-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.4. Técnicas principales de Machine Learning
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4. Técnicas principales de Machine Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-regresion-lineal-y-logistica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.4.1. Regresión Lineal y Logística
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-arboles-de-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.4.2. Árboles de Decisión
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#443-random-forest-bosques-aleatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.4.3. Random Forest (Bosques Aleatorios)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#444-support-vector-machines-svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.4.4. Support Vector Machines (SVM)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-aplicaciones-del-machine-learning-en-el-sector-productivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4.5. Aplicaciones del Machine Learning en el sector productivo
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5. Aplicaciones del Machine Learning en el sector productivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prediccion-de-demanda" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Predicción de demanda
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deteccion-de-fraude" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Detección de fraude
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mantenimiento-predictivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mantenimiento predictivo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segmentacion-de-clientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Segmentación de clientes
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-5-aprendizaje-profundo-deep-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 5: APRENDIZAJE PROFUNDO (DEEP LEARNING)
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 5: APRENDIZAJE PROFUNDO (DEEP LEARNING)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-introduccion-a-las-redes-neuronales-profundas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.1. Introducción a las redes neuronales profundas
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-inspiracion-biologica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.2. Inspiración biológica
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-arquitectura-de-una-red-neuronal" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.3. Arquitectura de una red neuronal
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3. Arquitectura de una red neuronal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Estructura básica
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexiones-y-pesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Conexiones y pesos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-funcionamiento-forward-propagation-y-backpropagation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.4. Funcionamiento: forward propagation y backpropagation
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4. Funcionamiento: forward propagation y backpropagation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forward-propagation-propagacion-hacia-adelante" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Forward propagation (propagación hacia adelante)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backpropagation-propagacion-hacia-atras" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Backpropagation (propagación hacia atrás)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-tipos-de-redes-neuronales-profundas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.5. Tipos de redes neuronales profundas
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.5. Tipos de redes neuronales profundas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redes-neuronales-convolucionales-cnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Redes Neuronales Convolucionales (CNN)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redes-neuronales-recurrentes-rnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Redes Neuronales Recurrentes (RNN)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Transformers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-ventajas-y-limitaciones-del-deep-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5.6. Ventajas y limitaciones del Deep Learning
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.6. Ventajas y limitaciones del Deep Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ventajas
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Limitaciones
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-6-tratamiento-de-datos-en-inteligencia-artificial" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 6: TRATAMIENTO DE DATOS EN INTELIGENCIA ARTIFICIAL
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 6: TRATAMIENTO DE DATOS EN INTELIGENCIA ARTIFICIAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-el-dato-como-pilar-fundamental" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.1. El dato como pilar fundamental
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-el-ciclo-de-vida-de-los-datos-en-proyectos-de-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.2. El ciclo de vida de los datos en proyectos de IA
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2. El ciclo de vida de los datos en proyectos de IA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recopilacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Recopilación
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Almacenamiento
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limpieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Limpieza
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Transformación
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis-exploratorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Análisis exploratorio
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelado" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Modelado
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Despliegue
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitorizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Monitorización
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-calidad-del-dato" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.3. Calidad del dato
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3. Calidad del dato">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimensiones-de-la-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Dimensiones de la calidad
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-aspectos-criticos-del-tratamiento-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.4. Aspectos críticos del tratamiento de datos
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4. Aspectos críticos del tratamiento de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641-privacidad-y-proteccion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.4.1. Privacidad y protección de datos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#642-sesgos-algoritmicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.4.2. Sesgos algorítmicos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#643-seguridad-y-ciberseguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.4.3. Seguridad y ciberseguridad
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#644-explicabilidad-y-transparencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.4.4. Explicabilidad y transparencia
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-7-mineria-de-datos-data-mining" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 7: MINERÍA DE DATOS (DATA MINING)
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 7: MINERÍA DE DATOS (DATA MINING)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-concepto-y-alcance" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.1. Concepto y alcance
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-el-proceso-kdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.2. El proceso KDD
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-tipos-de-mineria-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.3. Tipos de minería de datos
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3. Tipos de minería de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#731-mineria-de-datos-descriptiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.3.1. Minería de datos descriptiva
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732-mineria-de-datos-predictiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.3.2. Minería de datos predictiva
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#733-mineria-de-texto-text-mining" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.3.3. Minería de texto (Text Mining)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#734-mineria-web-web-mining" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.3.4. Minería web (Web Mining)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-aplicaciones-sectoriales-en-espana" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7.4. Aplicaciones sectoriales en España
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4. Aplicaciones sectoriales en España">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sector-tecnologico" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sector tecnológico
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#telecomunicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Telecomunicaciones
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#energia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Energía
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicios-financieros" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Servicios financieros
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salud" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Salud
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-8-integracion-de-la-ia-con-otras-tecnologias-habilitadoras" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 8: INTEGRACIÓN DE LA IA CON OTRAS TECNOLOGÍAS HABILITADORAS
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 8: INTEGRACIÓN DE LA IA CON OTRAS TECNOLOGÍAS HABILITADORAS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-la-ia-como-tecnologia-convergente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.1. La IA como tecnología convergente
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-ia-y-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.2. IA y Big Data
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-ia-e-internet-de-las-cosas-iot" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.3. IA e Internet de las Cosas (IoT)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-ia-y-cloud-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.4. IA y Cloud Computing
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85-ia-y-blockchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.5. IA y Blockchain
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#86-ia-y-robotica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.6. IA y Robótica
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#87-ia-y-realidad-aumentadavirtual" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8.7. IA y Realidad Aumentada/Virtual
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-9-tendencias-actuales-y-futuro-de-la-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 9: TENDENCIAS ACTUALES Y FUTURO DE LA IA
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 9: TENDENCIAS ACTUALES Y FUTURO DE LA IA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-ia-agentica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.1. IA Agéntica
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-ia-multimodal" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.2. IA Multimodal
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-ia-explicable-xai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.3. IA Explicable (XAI)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-etica-y-gobernanza-de-la-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9.4. Ética y Gobernanza de la IA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tema-10-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TEMA 10: CONCLUSIONES
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEMA 10: CONCLUSIONES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-la-ia-aprende-a-partir-de-datos-mediante-modelos-de-aprendizaje-automatico-y-profundo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.1. La IA aprende a partir de datos mediante modelos de aprendizaje automático y profundo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-existen-tres-tipos-de-ia-siendo-la-ia-estrecha-la-unica-presente-en-la-actualidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.2. Existen tres tipos de IA, siendo la IA estrecha la única presente en la actualidad
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-el-procesamiento-de-datos-es-clave-en-la-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.3. El procesamiento de datos es clave en la IA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#104-la-mineria-de-datos-extrae-patrones-y-conocimiento-util" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.4. La minería de datos extrae patrones y conocimiento útil
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#105-la-ia-se-integra-con-otras-tecnologias-habilitadoras-digitales" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.5. La IA se integra con otras tecnologías habilitadoras digitales
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#106-la-adopcion-de-ia-en-espana-esta-en-expansion-significativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.6. La adopción de IA en España está en expansión significativa
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#107-la-ia-no-sustituye-el-talento-humano-lo-potencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.7. La IA no sustituye el talento humano, lo potencia
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#108-la-adopcion-responsable-de-ia-es-imprescindible" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10.8. La adopción responsable de IA es imprescindible
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glosario-de-terminos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        GLOSARIO DE TÉRMINOS
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        FUENTES
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegación" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="./.." class="md-path__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="././" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Unidad4
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+
+<h1 id="ud4-inteligencia-artificial">UD4: INTELIGENCIA ARTIFICIAL</h1>
+<h2 id="apuntes-extendidos-digitalizacion-para-el-sector-productivo">Apuntes Extendidos - Digitalización para el Sector Productivo</h2>
+<hr />
+<h2 id="tema-1-contextualizacion-de-la-inteligencia-artificial">TEMA 1: CONTEXTUALIZACIÓN DE LA INTELIGENCIA ARTIFICIAL</h2>
+<h3 id="11-introduccion-y-panorama-actual">1.1. Introducción y panorama actual</h3>
+<p>La Inteligencia Artificial (IA) se ha convertido en una de las fuerzas transformadoras más significativas del siglo XXI. Para comprender realmente qué es la IA y por qué está revolucionando el sector productivo, necesitamos situarla en su contexto histórico y entender cómo hemos llegado hasta aquí.</p>
+<p>Hace apenas unas décadas, los ordenadores eran máquinas capaces de realizar cálculos matemáticos básicos y ejecutar instrucciones programadas de forma literal. La idea de que una máquina pudiera "aprender" de la experiencia, reconocer patrones en datos complejos o tomar decisiones autónomas parecía sacada de la ciencia ficción. Sin embargo, los avances en capacidad de procesamiento, la disponibilidad masiva de datos y el desarrollo de nuevos algoritmos han transformado esa visión en una realidad tangible que ya está impactando cada aspecto de nuestra vida profesional y personal.</p>
+<p>El contexto actual viene determinado por la confluencia de varios factores que han creado el caldo de cultivo perfecto para la explosión de la IA:</p>
+<p><strong>La explosión de datos:</strong> Vivimos en la era del Big Data. Cada día se generan aproximadamente 2.5 trillones de bytes de datos en todo el mundo. Esta cifra incluyen información de redes sociales, transacciones comerciales, sensores IoT, registros médicos, imágenes, videos y un sinfín de fuentes adicionales. El dato se ha convertido en el "nuevo petróleo" de la economía digital, y la IA es la herramienta que permite refinar este petróleo crudo para extraer valor actionable.</p>
+<p><strong>La ley de Moore y la capacidad de cómputo:</strong> Durante décadas, la capacidad de los procesadores se ha duplicado aproximadamente cada dos años. Este crecimiento exponencial ha permitido que ordenadores que antes ocupaban edificios enteros ahora quepan en nuestra palma. Pero lo más relevante para la IA es que las unidades de procesamiento gráfico (GPUs), diseñadas originalmente para renderizar gráficos de videojuegos, han resultado ser excepcionalmente eficientes para entrenar redes neuronales profundas. Esta coincidencia tecnológica ha acelerado dramáticamente el desarrollo del Deep Learning.</p>
+<p><strong>La democratización de la tecnología:</strong> Lo que antes requería inversiones millonarias en infraestructura ahora está al alcance de empresas de todos los tamaños. Los servicios de cloud computing como Amazon Web Services, Google Cloud o Microsoft Azure permiten a cualquier organización acceder a capacidad de cómputo escalable, herramientas de IA pre-entrenadas y plataformas de desarrollo sin necesidad de invertir en hardware propio.</p>
+<p><strong>La demanda empresarial de eficiencia:</strong> En un entorno competitivo cada vez más globalizado, las organizaciones buscan constantemente formas de mejorar su productividad, reducir costes y tomar decisiones más informadas. La IA ofrece herramientas para lograr estos objetivos en formas que antes eran imposibles.</p>
+<h3 id="12-la-situacion-de-la-ia-en-espana-y-europa">1.2. La situación de la IA en España y Europa</h3>
+<p>España se ha posicionado como uno de los países líderes en adopción de IA dentro del panorama europeo. Según datos del estudio "Desbloqueando el potencial de la IA en España en 2026" publicado por Amazon Web Services, el 61% de las empresas españolas ya han implementado soluciones de inteligencia artificial, situándose siete puntos por encima de la media europea, que se sitúa en el 54%. Este dato representa un crecimiento del 22% respecto al año anterior, lo que evidencia una aceleración significativa en la adopción.</p>
+<p>Sin embargo, es importante matizar esta visión positiva. Aunque el 64% de las empresas están utilizando IA, la mayoría se centran en casos de uso básicos como chatbots o asistentes virtuales. Solo el 17% de las empresas afirma hacer un uso avanzado de IA, combinando múltiples modelos o implementando sistemas de IA agéntica. Esta distinción entre uso básico y avanzado es fundamental para comprender el verdadero nivel de madurez tecnológica de nuestro tejido empresarial.</p>
+<p>Por otro lado, el Observatory Nacional de Tecnología y Sociedad (ONTSI) indica que el 11.4% de las empresas españolas de diez o más empleados utilizan tecnologías de IA, elevándose este porcentaje al 44% cuando hablamos de grandes empresas con más de 249 trabajadores. Esta brecha entre pequeñas y grandes empresas refleja las barreras de entrada que aún existen: la necesidad de inversiones significativas, acceso a talento especializado y capacidades de gestión del cambio organizacional.</p>
+<h3 id="13-impacto-en-la-productividad-empresarial">1.3. Impacto en la productividad empresarial</h3>
+<p>Los datos demuestran que la IA está generando un impacto tangible en la productividad de las organizaciones. Según el Estudio de Proyección de Empleo de ManpowerGroup 2026, el 59% de las empresas españolas identifica las herramientas de IA para tareas diarias como el principal motor de rendimiento, mientras que el 55% destaca la automatización de procesos y el 51% considera estas herramientas parte fundamental de su estrategia empresarial.</p>
+<p>Quizás lo más significativo es que el 81% de las empresas que usan IA reportan aumentos directos de productividad, y un 89% espera que esta tecnología impulse el crecimiento de su negocio durante el próximo año. Estos datos sugieren que la IA ha dejado de ser una promesa futura para convertirse en una realidad presente con resultados medibles.</p>
+<p>Sin embargo, y este es un punto crucial que diferencia a las empresas realmente exitosas, la tecnología por sí sola no garantiza la productividad. El mismo estudio revela que el 51% de las empresas señala los programas de upskilling y reskilling como fuentes relevantes de mejora, mientras que el 48% destaca la capacitación específica para el uso de herramientas de IA. La inteligencia artificial se consolida como herramienta estratégica, pero su impacto es mucho mayor cuando va acompañada de inversión en formación, desarrollo de competencias y medidas que favorezcan la experiencia de los profesionales.</p>
+<hr />
+<h2 id="tema-2-fundamentos-conceptuales-de-la-inteligencia-artificial">TEMA 2: FUNDAMENTOS CONCEPTUALES DE LA INTELIGENCIA ARTIFICIAL</h2>
+<h3 id="21-definicion-rigurosa-de-inteligencia-artificial">2.1. Definición rigurosa de Inteligencia Artificial</h3>
+<p>La Inteligencia Artificial es un campo de la informática dedicado al desarrollo de sistemas, algoritmos y técnicas que permiten a las máquinas realizar tareas que, tradicionalmente, requerían de la inteligencia, el razonamiento o la intervención humana. Esta definición, aunque correcta, es deliberadamente amplia porque la IA abarca un enorme espectro de tecnologías, desde sistemas muy simples hasta arquitecturas complejísimas.</p>
+<p>Para entender mejor el concepto, es útil pensar en la IA como un paraguas bajo el cual se cobijan múltiples disciplinas y técnicas:</p>
+<ul>
+<li><strong>Aprendizaje automático (Machine Learning):</strong> Sistemas que aprenden patrones a partir de datos sin ser explícitamente programados para cada tarea específica.</li>
+<li><strong>Aprendizaje profundo (Deep Learning):</strong> Una subdivisión del ML que utiliza redes neuronales con múltiples capas para aprender representaciones jerárquicas de los datos.</li>
+<li><strong>Procesamiento de lenguaje natural (NLP):</strong> Capacidades que permiten a las máquinas comprender, interpretar y generar texto humano.</li>
+<li><strong>Visión artificial (Computer Vision):</strong> Sistemas que pueden interpretar y comprender información visual del mundo real.</li>
+<li><strong>Robótica:</strong> Diseño y programación de robots inteligentes capaces de interactuar con el entorno físico.</li>
+<li><strong>Sistemas de recomendación:</strong> Algoritmos que predicen las preferencias de los usuarios basándose en su comportamiento pasado.</li>
+</ul>
+<h3 id="22-caracteristicas-distintivas-de-los-sistemas-de-ia">2.2. Características distintivas de los sistemas de IA</h3>
+<p>Los sistemas de IA modernos comparten una serie de características que los distinguen de los programas informáticos tradicionales:</p>
+<p><strong>Automatización inteligente:</strong> A diferencia de un programa convencional que sigue instrucciones predefinidas paso a paso, un sistema de IA puede manejar situaciones nuevas, siempre que se parezcan a las que ha visto durante su entrenamiento. Esta capacidad de generalización es lo que hace a la IA verdaderamente valiosa.</p>
+<p><strong>Aprendizaje adaptativo:</strong> Los sistemas de IA pueden mejorar su rendimiento con el tiempo a medida que procesan más datos y reciben retroalimentación. Un sistema de IA no es estático; evoluciona y se refina continuamente.</p>
+<p><strong>Procesamiento de grandes volúmenes de información:</strong> La IA puede analizar cantidades de datos que serían imposiblemente enormes para que los procesara un ser humano. Puede identificar patrones sutiles y correlaciones complejas que pasarían desapercibidos en análisis manuales.</p>
+<p><strong>Toma de decisiones basada en evidencia:</strong> Los sistemas de IA reducen la subjetividad en las decisiones al basarse en análisis objetivos de datos. Esto no significa que las decisiones sean perfectas o que eliminen completamente el sesgo humano (de hecho, pueden introducir sus propios sesgos), pero sí aportan un componente analítico riguroso.</p>
+<p><strong>Personalización a escala:</strong> La IA permite ofrecer experiencias individualizadas a millones de usuarios simultáneamente. Netflix recomienda películas diferentes a cada usuario basándose en sus hábitos; Amazon sugiere productos personalizados; Spotify crea playlists adaptadas a cada oyente.</p>
+<h3 id="23-diferencia-entre-ia-machine-learning-y-deep-learning">2.3. Diferencia entre IA, Machine Learning y Deep Learning</h3>
+<p>Es fundamental comprender las relaciones jerárquicas entre estos conceptos para evitar confusiones:</p>
+<p><strong>Inteligencia Artificial (concepto más amplio):</strong> Incluye cualquier técnica que permita a las máquinas mostrar comportamiento inteligente. Incluye tanto sistemas basados en reglas como sistemas basados en aprendizaje.</p>
+<p><strong>Machine Learning (subconjunto de IA):</strong> Sistemas que aprenden patrones directamente de los datos. Un programa de ML no se programa con instrucciones específicas para cada tarea; en su lugar, se le proporcionan ejemplos y el algoritmo extrae las reglas por sí mismo.</p>
+<p><strong>Deep Learning (subconjunto de ML):</strong> Utiliza redes neuronales artificiales con múltiples capas (de ahí el término "profundo"). Cada capa transforma los datos de entrada en representaciones cada vez más abstractas, permitiendo aprender patrones muy complejos.</p>
+<h3 id="24-aplicaciones-cotidianas-de-la-ia">2.4. Aplicaciones cotidianas de la IA</h3>
+<p>La IA está presente en muchas tecnologías que utilizamos sin pensar en los complejos procesos que hay detrás:</p>
+<p><strong>Asistentes virtuales:</strong> Siri, Alexa, Google Assistant y otros utilizan procesamiento de lenguaje natural para entender preguntas y proporcionar respuestas. También emplean aprendizaje automático para mejorar con el uso y adaptarse a los patrones de voz de cada usuario.</p>
+<p><strong>Sistemas de recomendación:</strong> Las sugerencias de Netflix, Spotify, Amazon o YouTube se basan en algoritmos que analizan nuestro comportamiento pasado y el de usuarios similares para predecir qué contenido nos gustará.</p>
+<p><strong>Filtros de correo spam:</strong> Los sistemas de detección de spam de Gmail aprenden continuamente de los correos que marcamos como spam o no spam, perfeccionando sus filtros para identificar mejor los mensajes no deseados.</p>
+<p><strong>Reconocimiento facial:</strong> Se utiliza para desbloquear smartphones, etiquetar personas en fotos de redes sociales, o en sistemas de seguridad.</p>
+<p><strong>Traducción automática:</strong> Servicios como Google Translate utilizan redes neuronales profundas (especialmente la arquitectura Transformer) para proporcionar traducciones cada vez más precisas y naturales.</p>
+<p><strong>Conducción autónoma:</strong> Los vehículos autónomos combinan visión artificial, sensores, mapas de alta precisión y sistemas de toma de decisiones para circular sin conductor humano.</p>
+<p><strong>Diagnóstico médico:</strong> La IA está ayudando a los médicos a detectar enfermedades en etapas tempranas, analizando imágenes médicas con una precisión que rivaliza o supera la de los especialistas humanos en ciertos ámbitos.</p>
+<hr />
+<h2 id="tema-3-taxonomia-de-la-inteligencia-artificial">TEMA 3: TAXONOMÍA DE LA INTELIGENCIA ARTIFICIAL</h2>
+<h3 id="31-clasificacion-por-capacidad-ia-estrecha-general-y-superinteligente">3.1. Clasificación por capacidad: IA Estrecha, General y Superinteligente</h3>
+<p>La clasificación más fundamental de la IA se basa en su nivel de capacidad o sofisticación:</p>
+<h4 id="311-ia-estrecha-weak-ai-o-narrow-ai">3.1.1. IA Estrecha (Weak AI o Narrow AI)</h4>
+<p>La IA Estrecha es la única forma de IA que existe actualmente de manera efectiva y extendida. Está diseñada para realizar tareas específicas y concretas, por muy complejas que sean esas tareas. No tiene consciencia, comprensión general del mundo ni capacidad de transferir conocimiento entre dominios diferentes.</p>
+<p><strong>Características definitorias:</strong></p>
+<ul>
+<li><strong>Especialización extrema:</strong> Es excelente haciendo UNA cosa, pero no puede aplicar ese conocimiento a otras áreas.</li>
+<li><strong>Dependencia del contexto:</strong> Funciona dentro de un dominio limitado y definidos.</li>
+<li><strong>Sin comprensión genuina:</strong> Puede reconocer patrones y responder de forma apropiada, pero no "entiende" en el sentido humano.</li>
+<li><strong>Comportamiento predecible:</strong> Dentro de su dominio, su comportamiento es relativamente predecible y auditables.</li>
+</ul>
+<p><strong>Ejemplos concretos de IA Estrecha:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aplicación</th>
+<th>Descripción</th>
+<th>Tipo de tarea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AlphaGo</td>
+<td>Programa que domina el juego Go</td>
+<td>Tarea única: jugar Go</td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td>Asistente conversacional</td>
+<td>Procesamiento de lenguaje</td>
+</tr>
+<tr>
+<td>Watson</td>
+<td>Sistema de preguntas y respuestas</td>
+<td>Recuperación y síntesis de información</td>
+</tr>
+<tr>
+<td>Tesla Autopilot</td>
+<td>Conducción asistida</td>
+<td>Navegación y control vehicular</td>
+</tr>
+<tr>
+<td>Sistema de diagnóstico de retinopathy</td>
+<td>Detección de enfermedad ocular</td>
+<td>Análisis de imágenes médicas</td>
+</tr>
+</tbody>
+</table>
+<p><strong>¿Por qué es importante entender la IA Estrecha?</strong></p>
+<p>A pesar de sus limitaciones, la IA Estrecha es extraordinariamente valiosa. Prácticamente todas las aplicaciones de IA que Benefician a las empresas y a la sociedad hoy en día son ejemplos de IA Estrecha. Su especialización permite que sea extremadamente efectiva en tareas específicas, superando frecuentemente a los humanos en velocidad, precisión y consistencia.</p>
+<p>Además, entender que la IA actual es "estrecha" nos ayuda a mantener expectativas realistas y a enfocar los esfuerzos de desarrollo e implementación de forma apropiada.</p>
+<h4 id="312-ia-general-strong-ai-o-agi">3.1.2. IA General (Strong AI o AGI)</h4>
+<p>La IA General (también llamada IA Fuerte o AGI por sus siglas en inglés) Hypothetical想象中) es una IA con capacidades cognitivas equivalentes a las humanas. Tal sistema sería capaz de comprender, aprender y aplicar conocimientos en cualquier domaine de manera completamente autónoma y transferable.</p>
+<p><strong>Características hypothéticas:</strong></p>
+<ul>
+<li><strong>Razonamiento general:</strong> Podría abordar cualquier problema intelectual que un humano pueda resolver.</li>
+<li><strong>Transferencia de conocimiento:</strong> Podría aplicar lo aprendido en un dominio a otros dominios completamente diferentes.</li>
+<li><strong>Comprensión contextual:</strong> Entendería el mundo de forma similar a como lo hacen los humanos.</li>
+<li><strong>Consciencia y metacognición:</strong> Tendría algún nivel de autoconciencia y capacidad de reflexionar sobre su propio pensamiento.</li>
+</ul>
+<p><strong>Estado actual:</strong></p>
+<p>La IA General no existe todavía. Aunque los sistemas actuales como GPT-4 o Claude muestran capacidades impresionantes en múltiples dominios, todavía fallan de formas fundamentales que revelan que no tienen comprensión genuina. Pueden manipular símbolos lingüísticos de forma brillante sin entender realmente lo que significan. Este debate filosófico sobre si estos sistemas "realmente entienden" o simplemente son "autómatas estadísticos muy sofisticados" sigue sin resolverse.</p>
+<h4 id="313-ia-superinteligente-super-ai">3.1.3. IA Superinteligente (Super AI)</h4>
+<p>La IA Superinteligente es un concepto teórico que describe una IA que superaría la inteligencia humana en prácticamente todos los aspectos: creatividad, sabiduría, resolución de problemas, habilidades sociales, etc.</p>
+<p><strong>Implicaciones y debates:</strong></p>
+<p>La posibilidad de desarrollar una IA superinteligente plantea cuestiones profundas:</p>
+<ul>
+<li><strong>Control y alineación:</strong> ¿Cómo nos aseguramos de que una entidad más inteligente que nosotros actúe en nuestro beneficio?</li>
+<li><strong>El problema de la parada:</strong> No podemos predecir con seguridad el comportamiento de sistemas altamente avanzados.</li>
+<li><strong>Impacto social:</strong> Las implicaciones para el empleo, la economía y la supervivencia humana serían enormes.</li>
+</ul>
+<p><strong>Postura actual:</strong></p>
+<p>La mayoría de los expertos creen que la IA Superinteligente está todavía muy lejos, si es que alguna vez es posible alcanzarla. Sin embargo, también reconocen que es un área de investigación activa y que debemos comenzar a prepararnos para sus implicaciones éticas y de seguridad.</p>
+<h3 id="32-clasificacion-por-metodologia-y-funcionalidad">3.2. Clasificación por metodología y funcionalidad</h3>
+<p>Otra forma de clasificar los sistemas de IA es según su enfoque metodológico:</p>
+<h4 id="sistemas-reactivos">Sistemas Reactivos</h4>
+<p>Los sistemas reactivos son los más simples. No tienen memoria ni capacidad de aprendizaje; simplemente responden a las condiciones actuales basándose en reglas predefinidas.</p>
+<p><strong>Ejemplo:</strong> Deep Blue, el programa de ajedrez de IBM que venció a Garry Kasparov en 1997. Analizaba las posiciones actuales de las piezas y aplicaba algoritmos para determinar el mejor movimiento, pero no "aprendía" de partidas anteriores.</p>
+<h4 id="sistemas-con-memoria-limitada">Sistemas con Memoria Limitada</h4>
+<p>Estos sistemas pueden utilizar experiencia pasada para informar decisiones actuales. La mayoría de los sistemas de Machine Learning caen en esta categoría: aprenden de datos históricos y aplican ese aprendizaje a nuevas situaciones.</p>
+<p><strong>Ejemplo:</strong> Un sistema de reconocimiento de spam que ha aprendido de millones de correos clasificados para identificar patrones en correos futuros.</p>
+<h4 id="sistemas-con-teoria-de-la-mente">Sistemas con Teoría de la Mente</h4>
+<p>Este es un concepto más avanzado donde la IA puede comprender que otros agentes tienen sus propias creencias, intenciones y conocimientos distintos de los suyos. Es un área de investigación activa y la mayoría de los sistemas actuales no tienen esta capacidad plenamente desarrollada.</p>
+<h4 id="sistemas-con-autoconciencia">Sistemas con Autoconciencia</h4>
+<p>Los sistemas con autoconciencia tendrían un sentido de identidad propio, comprensión de su propio estado y capacidad de predecir sus propias acciones. Actualmente son puramente teóricos.</p>
+<h3 id="33-paradigmas-de-aprendizaje-en-ia">3.3. Paradigmas de aprendizaje en IA</h3>
+<p>Una de las formas más útiles de categorizar los sistemas de IA es según cómo aprenden de los datos:</p>
+<h4 id="aprendizaje-supervisado">Aprendizaje Supervisado</h4>
+<p>En el aprendizaje supervisado, el algoritmo aprende a partir de datos etiquetados, donde para cada ejemplo se proporciona tanto la entrada como la salida deseada.</p>
+<p><strong>Funcionamiento:</strong></p>
+<ol>
+<li>Se proporciona al algoritmo un dataset con ejemplos: (entrada, salida_correcta).</li>
+<li>El algoritmo ajusta sus parámetros internos para minimizar la diferencia entre sus predicciones y las salidas reales.</li>
+<li>Una vez entrenado, puede generalizar a ejemplos nuevos que no ha visto durante el entrenamiento.</li>
+</ol>
+<p><strong>Tipos de problemas:</strong></p>
+<ul>
+<li><strong>Clasificación:</strong> Asignar elementos a categorías discretas (spam/no spam, aprobado/rechazado).</li>
+<li><strong>Regresión:</strong> Predecir valores continuos (precio de una casa, temperatura, probabilidad).</li>
+</ul>
+<p><strong>Ejemplos de aplicación:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Datos de entrada</th>
+<th>Predicción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Detección de fraude</td>
+<td>Datos de transacción</td>
+<td>¿Fraude o legítimo?</td>
+</tr>
+<tr>
+<td>Predicción de precios</td>
+<td>Características de vivienda</td>
+<td>Precio estimado</td>
+</tr>
+<tr>
+<td>Reconocimiento de imágenes</td>
+<td>Píxeles de imagen</td>
+<td>Categoría del objeto</td>
+</tr>
+<tr>
+<td>Diagnóstico médico</td>
+<td>Síntomas, pruebas</td>
+<td>Enfermedad presente</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ventajas y limitaciones:</strong></p>
+<p>El aprendizaje supervisado es muy efectivo cuando se dispone de grandes cantidades de datos etiquetados. Su principal limitación es que requiere que alguien "etiquete" los datos, proceso que puede ser costoso y lento. Además, los modelos supervisados pueden tener dificultades para manejar situaciones completamente nuevas diferentes de todo lo visto durante el entrenamiento.</p>
+<h4 id="aprendizaje-no-supervisado">Aprendizaje No Supervisado</h4>
+<p>En el aprendizaje no supervisado, el algoritmo recibe datos sin etiquetas y debe encontrar patrones o estructura por sí mismo.</p>
+<p><strong>Funcionamiento:</strong></p>
+<ol>
+<li>Se proporciona al algoritmo un dataset sin ninguna información sobre qué es "correcto".</li>
+<li>El algoritmo busca similitudes, diferencias, patrones o estructura en los datos.</li>
+<li>Se descubren correlaciones y segmentos que pueden no haber sido evidentes para los humanos.</li>
+</ol>
+<p><strong>Tipos de problemas:</strong></p>
+<ul>
+<li><strong>Clustering (agrupamiento):</strong> Dividir los datos en grupos de elementos similares.</li>
+<li><strong>Detección de anomalías:</strong> Identificar elementos muy diferentes del resto.</li>
+<li><strong>Reducción de dimensionalidad:</strong> Simplificar datos complejos conservando la información esencial.</li>
+<li><strong>Aprendizaje de reglas de asociación:</strong> Descubrir relaciones entre variables.</li>
+</ul>
+<p><strong>Ejemplos de aplicación:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Método</th>
+<th>Descubrimiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Segmentación de clientes</td>
+<td>Clustering</td>
+<td>Grupos naturales de clientes con comportamientos similares</td>
+</tr>
+<tr>
+<td>Detección de fraude</td>
+<td>Anomaly detection</td>
+<td>Transacciones inusuales que se desvían del patrón normal</td>
+</tr>
+<tr>
+<td>Análisis del carrito de compra</td>
+<td>Association rules</td>
+<td>"Los clientes que compran pan usually also buy mantequilla"</td>
+</tr>
+<tr>
+<td>Compresión de datos</td>
+<td>Dimensionality reduction</td>
+<td>Representación simplificada de datos complejos</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ventajas y limitaciones:</strong></p>
+<p>El aprendizaje no supervisado es valioso porque no requiere datos etiquetados, lo que lo hace más aplicable en situaciones donde etiquetar es costoso o imposible. Sin embargo, evaluar si el algoritmo ha encontrado algo "útil" es más difícil porque no hay "respuesta correcta" con la que comparar.</p>
+<h4 id="aprendizaje-por-refuerzo">Aprendizaje por Refuerzo</h4>
+<p>En el aprendizaje por refuerzo, un agente aprende interactuando con un entorno, recibiendo recompensas o penalizaciones según los resultados de sus acciones.</p>
+<p><strong>Funcionamiento:</strong></p>
+<ol>
+<li>El agente está en un entorno y toma decisiones (acciones).</li>
+<li>Cada acción cambia el estado del entorno y el agente recibe retroalimentación (recompensa o castigo).</li>
+<li>El objetivo del agente es aprender la estrategia (política) que maximiza las recompensas acumuladas a lo largo del tiempo.</li>
+</ol>
+<p><strong>Elementos clave:</strong></p>
+<ul>
+<li><strong>Agente:</strong> El sistema de IA que toma decisiones.</li>
+<li><strong>Entorno:</strong> El mundo con el que interactua el agente.</li>
+<li><strong>Estado:</strong> La situación actual del entorno.</li>
+<li><strong>Acción:</strong> Lo que el agente decide hacer.</li>
+<li><strong>Recompensa:</strong> Retroalimentación numérica que indica qué tan buena fue la acción.</li>
+</ul>
+<p><strong>Ejemplos de aplicación:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dominio</th>
+<th>Agente</th>
+<th>Entorno</th>
+<th>Recompensa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Juegos</td>
+<td>Programa de ajedrez</td>
+<td>Tablero</td>
+<td>Victoria = +1, Derrota = -1</td>
+</tr>
+<tr>
+<td>Robótica</td>
+<td>Controlador de robot</td>
+<td>Espacio físico</td>
+<td>Tarea completada = +1</td>
+</tr>
+<tr>
+<td>Recomendación</td>
+<td>Sistema de recomendación</td>
+<td>Catálogo de contenidos</td>
+<td>Usuario hace clic = +1</td>
+</tr>
+<tr>
+<td>Trading algorítmico</td>
+<td>Bot de inversión</td>
+<td>Mercados financieros</td>
+<td>Ganancia = +1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>AlphaGo y AlphaZero:</strong></p>
+<p>El sistema AlphaGo de DeepMind utilizó aprendizaje por refuerzo combinado con redes neuronales profundas para dominar el juego de Go. Lo notable es que AlphaZero, la siguiente versión, aprendió a jugar múltiples juegos (Go, ajedrez, shogi) desde cero, sin conocer nada excepto las reglas, alcanzando un nivel sobrehumano en cuestión de horas.</p>
+<p><strong>Ventajas y limitaciones:</strong></p>
+<p>El aprendizaje por refuerzo puede descubrir soluciones innovadoras que los humanos no habían considerado. Sin embargo, requiere muchas interacciones (y por tanto mucho tiempo y recursos computacionales) para aprender. También puede encontrar "atajos" que maximizan la recompensa de formas no deseadas: por ejemplo, un agente de IA que debería maximizar la felicidad pero descubre cómo estimular directamente los centros de placer.</p>
+<hr />
+<h2 id="tema-4-aprendizaje-automatico-machine-learning">TEMA 4: APRENDIZAJE AUTOMÁTICO (MACHINE LEARNING)</h2>
+<h3 id="41-conceptos-fundamentales-del-machine-learning">4.1. Conceptos fundamentales del Machine Learning</h3>
+<p>El Machine Learning es el corazón de la IA moderna. Es la disciplina que permite a los sistemas aprender automáticamente a partir de datos, identificando patrones y mejorando su rendimiento con la experiencia sin ser explícitamente programados para cada tarea.</p>
+<p><strong>Definición formal:</strong></p>
+<p>Un programa de computadora se dice que aprende de la experiencia E con respecto a una clase de tareas T y medida de rendimiento P, si su rendimiento en tareas de la clase T, medido por P, mejora con la experiencia E.</p>
+<p>Esta definición de Tom Mitchell (1998) captura la esencia del aprendizaje automático: el mejora desempeño en una tarea específica a medida que acumula experiencia.</p>
+<h3 id="42-componentes-de-un-sistema-de-machine-learning">4.2. Componentes de un sistema de Machine Learning</h3>
+<p>Cualquier sistema de Machine Learning se compone de los siguientes elementos:</p>
+<p><strong>Datos (Dataset):</strong></p>
+<p>Los datos son el combustible del Machine Learning. Un dataset típico se compone de:</p>
+<ul>
+<li><strong>Instancias/ejemplos:</strong> Cada fila de datos representa un ejemplo individual.</li>
+<li><strong>Features (características/variables):</strong> Cada columna representa una propiedad medible del fenómeno.</li>
+<li><strong>Target (objetivo):</strong> La variable que queremos predecir (en aprendizaje supervisado).</li>
+<li><strong>Etiquetas (labels):</strong> El valor del target para cada实例 (en datos etiquetados).</li>
+</ul>
+<p><strong>Algoritmo:</strong></p>
+<p>El algoritmo es el conjunto de instrucciones matemáticas que procesa los datos de entrada para generar una predicción o decisión. Diferentes algoritmos son apropiados para diferentes tipos de problemas.</p>
+<p><strong>Modelo:</strong></p>
+<p>El modelo es el producto final del entrenamiento. Es la "función" que recibe nuevos datos de entrada y produce una predicción. En términos matemáticos, si nuestros datos tienen features X, el modelo es una función f(X) que produce predicciones.</p>
+<p><strong>Función de pérdida (Loss Function):</strong></p>
+<p>Mide qué tan diferente es la predicción del modelo respecto al valor real. El objetivo del entrenamiento es minimizar esta función de pérdida.</p>
+<p><strong>Optimizador:</strong></p>
+<p>El optimizador es el algoritmo que ajusta los parámetros del modelo para minimizar la función de pérdida. Ejemplos incluyen el descenso de gradiente y sus variantes (SGD, Adam, RMSprop).</p>
+<h3 id="43-el-proceso-de-desarrollo-de-un-modelo-de-ml">4.3. El proceso de desarrollo de un modelo de ML</h3>
+<p>Desarrollar un modelo de Machine Learning no es simplemente "apuntar datos y obtener resultados". Es un proceso iterativo que requiere múltiples pasos:</p>
+<h4 id="paso-1-definicion-del-problema">Paso 1: Definición del problema</h4>
+<p>Antes de escribir cualquier código, debemos entender:</p>
+<ul>
+<li>¿Qué queremos predecir exactamente?</li>
+<li>¿Qué tipo de problema es (clasificación, regresión, clustering)?</li>
+<li>¿Cómo mediremos el éxito?</li>
+<li>¿Qué restricciones tenemos (datos, tiempo, recursos)?</li>
+</ul>
+<h4 id="paso-2-recopilacion-de-datos">Paso 2: Recopilación de datos</h4>
+<p>Necesitamos datos suficientes y representativos. Esta fase incluye:</p>
+<ul>
+<li>Identificar fuentes de datos internas y externas.</li>
+<li>Diseñar mecanismos de recopilación.</li>
+<li>Asegurarse de que los datos sean legales y éticos de obtener.</li>
+</ul>
+<h4 id="paso-3-exploracion-y-preparacion-de-datos">Paso 3: Exploración y preparación de datos</h4>
+<p>Esta fase consume típicamente entre el 60% y el 80% del tiempo total del proyecto:</p>
+<ul>
+<li><strong>Limpieza:</strong> Manejar valores faltantes, errores, duplicados.</li>
+<li><strong>Análisis exploratorio:</strong> Entender las distribuciones, correlaciones, anomalías.</li>
+<li><strong>Visualización:</strong> Crear gráficos para comprender los datos.</li>
+</ul>
+<h4 id="paso-4-ingenieria-de-features">Paso 4: Ingeniería de features</h4>
+<p>Transformar los datos brutos en características que los algoritmos puedan utilizar efectivamente:</p>
+<ul>
+<li><strong>Selección de features:</strong> Elegir las variables más relevantes.</li>
+<li><strong>Extracción de features:</strong> Crear nuevas variables a partir de las existentes.</li>
+<li><strong>Codificación:</strong> Convertir variables categóricas a numéricas.</li>
+<li><strong>Normalización:</strong> Escalar variables numéricas a rangos comparables.</li>
+</ul>
+<h4 id="paso-5-seleccion-del-modelo">Paso 5: Selección del modelo</h4>
+<p>Elegir qué algoritmo utilizar basándose en:</p>
+<ul>
+<li>El tipo de problema (clasificación vs. regresión).</li>
+<li>El tamaño y naturaleza de los datos.</li>
+<li>Los requisitos de interpretabilidad.</li>
+<li>Los recursos computacionales disponibles.</li>
+</ul>
+<h4 id="paso-6-entrenamiento">Paso 6: Entrenamiento</h4>
+<p>Ajustar el modelo a los datos de entrenamiento:</p>
+<ul>
+<li>Dividir los datos en conjuntos de entrenamiento, validación y prueba.</li>
+<li>Seleccionar hiperparámetros.</li>
+<li>Entrenar múltiples modelos y comparar.</li>
+</ul>
+<h4 id="paso-7-evaluacion">Paso 7: Evaluación</h4>
+<p>Medir el rendimiento del modelo:</p>
+<ul>
+<li>Utilizar métricas apropiadas (precisión, recall, F1, AUC, etc.).</li>
+<li>Validar en datos que el modelo no ha visto.</li>
+<li>Identificar fallos y sesgos.</li>
+</ul>
+<h4 id="paso-8-despliegue-e-monitorizacion">Paso 8: Despliegue e monitorización</h4>
+<p>Poner el modelo en producción:</p>
+<ul>
+<li>Integrar con sistemas existentes.</li>
+<li>Establecer monitorización continua.</li>
+<li>Planificar actualizaciones y reentrenamiento.</li>
+</ul>
+<h3 id="44-tecnicas-principales-de-machine-learning">4.4. Técnicas principales de Machine Learning</h3>
+<h4 id="441-regresion-lineal-y-logistica">4.4.1. Regresión Lineal y Logística</h4>
+<p><strong>Regresión Lineal:</strong></p>
+<p>Se utiliza para predecir valores continuos. La idea es encontrar la "mejor línea recta" que relaciona una variable independiente con la dependiente.</p>
+<p><strong>Ejemplo:</strong> Predecir el precio de una casa basándose en su superficie.</p>
+<p>La ecuación es: Y = β₀ + β₁X + ε</p>
+<p>Donde Y es el precio, X es la superficie, β₀ y β₁ son coeficientes que aprendemos de los datos, y ε es el error.</p>
+<p><strong>Regresión Logística:</strong></p>
+<p>Se utiliza para clasificación binaria. En lugar de predecir un valor continuo, predice la probabilidad de que una实例 pertenezca a una clase.</p>
+<p><strong>Ejemplo:</strong> Predecir si un cliente comprará (1) o no (0) basándose en su historial.</p>
+<p>La salida es un valor entre 0 y 1 que represent la probabilidad.</p>
+<h4 id="442-arboles-de-decision">4.4.2. Árboles de Decisión</h4>
+<p>Los árboles de decisión toman decisiones mediante una serie de preguntas secuenciales sobre las características de los datos.</p>
+<p><strong>Ventajas:</strong></p>
+<ul>
+<li>Fáciles de interpretar y explicar.</li>
+<li>No requieren normalización de datos.</li>
+<li>Pueden manejar tanto variables numéricas como categóricas.</li>
+</ul>
+<p><strong>Desventajas:</strong></p>
+<ul>
+<li>Tienden al sobreajuste (memorizan los datos de entrenamiento).</li>
+<li>Pequeños cambios en los datos pueden cambiar drastically el árbol.</li>
+</ul>
+<p><strong>Ejemplo de interpretación:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>¿Edad &gt; 30?
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  ├── Sí: ¿Ingresos &gt; 50000?
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  │     ├── Sí: Aprobado
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  │     └── No: En revisión
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  └── No: ¿Tipo empleo = Fijo?
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        ├── Sí: Aprobado
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        └── No: Rechazado
+</span></code></pre></div>
+<h4 id="443-random-forest-bosques-aleatorios">4.4.3. Random Forest (Bosques Aleatorios)</h4>
+<p>Los Random Forests combinan múltiples árboles de decisión para obtener predicciones más robustas y precisas.</p>
+<p><strong>Funcionamiento:</strong></p>
+<ol>
+<li>Crear múltiples muestras de los datos de entrenamiento (bootstrapping).</li>
+<li>Para cada muestra, entrenar un árbol de decisión con un subconjunto aleatorio de features.</li>
+<li>Para predicción, promediar los resultados de todos los árboles (regresión) o tomar la mayoría (clasificación).</li>
+</ol>
+<p><strong>Ventajas:</strong></p>
+<ul>
+<li>Reduce significativamente el sobreajuste.</li>
+<li>Maneja bien datos faltantes.</li>
+<li>Funciona bien con alta dimensionalidad.</li>
+</ul>
+<h4 id="444-support-vector-machines-svm">4.4.4. Support Vector Machines (SVM)</h4>
+<p>Los SVM encuentran el hiperplano (en espacios multidimensionales) que mejor separa las diferentes clases.</p>
+<p><strong>Concepto clave:</strong> El "margen" máximo entre las clases.</p>
+<p><strong>Ventajas:</strong></p>
+<ul>
+<li>Efectivos en espacios de alta dimensionalidad.</li>
+<li>Memoria eficiente.</li>
+<li>Versátiles mediante el uso de diferentes funciones kernel.</li>
+</ul>
+<p><strong>Aplicaciones:</strong> Clasificación de texto, reconocimiento de imágenes, bioinformática.</p>
+<h3 id="45-aplicaciones-del-machine-learning-en-el-sector-productivo">4.5. Aplicaciones del Machine Learning en el sector productivo</h3>
+<h4 id="prediccion-de-demanda">Predicción de demanda</h4>
+<p>Las empresas utilizan modelos de ML para anticipar qué productos necesitarán, en qué cantidades y cuándo. Esto les permite optimizar su inventario, reducir costes de almacenamiento y evitar roturas de stock.</p>
+<p><strong>Ejemplo:</strong> Un supermercado puede predecir cuántos litros de leche venderá cada día en cada tienda, ajustando pedidos y reduciendo desperdicio.</p>
+<h4 id="deteccion-de-fraude">Detección de fraude</h4>
+<p>Los sistemas de ML analizan millones de transacciones en tiempo real para identificar patrones sospechosos.</p>
+<p><strong>Ejemplo:</strong> Los bancos utilizan modelos que aprenden qué combinaciones de factores (importe, ubicación, hora, dispositivo) son características de transacciones fraudulentas.</p>
+<h4 id="mantenimiento-predictivo">Mantenimiento predictivo</h4>
+<p>En lugar de esperar a que la maquinaria falle o seguir calendarios fijos de mantenimiento, las empresas utilizan ML para predecir cuándo es probable que ocurra un fallo.</p>
+<p><strong>Ejemplo:</strong> Una compañía aérea puede predecir qué componentes de un avión necesitarán reemplazo basándose en datos de sensores, optimizando el mantenimiento sin esperar a fallos.</p>
+<h4 id="segmentacion-de-clientes">Segmentación de clientes</h4>
+<p>El clustering y otras técnicas de ML permiten dividir la base de clientes en grupos homogéneos con características y comportamientos similares.</p>
+<p><strong>Ejemplo:</strong> Una empresa de telecomunicaciones puede identificar segmentos como "jóvenes usuarios intensivos de datos", "familias con uso moderado" o "usuarios mayores con necesidades básicas", y adaptar sus ofertas a cada segmento.</p>
+<hr />
+<h2 id="tema-5-aprendizaje-profundo-deep-learning">TEMA 5: APRENDIZAJE PROFUNDO (DEEP LEARNING)</h2>
+<h3 id="51-introduccion-a-las-redes-neuronales-profundas">5.1. Introducción a las redes neuronales profundas</h3>
+<p>El Deep Learning es un subcampo del Machine Learning que utiliza redes neuronales artificiales con múltiples capas ocultas ("profundas") para aprender representaciones jerárquicas de los datos. La "profundidad" es lo que distingue al Deep Learning del Machine Learning tradicional: mientras que un modelo de ML tradicional puede tener unas pocas capas, las redes profundas pueden tener decenas o incluso cientos de capas.</p>
+<h3 id="52-inspiracion-biologica">5.2. Inspiración biológica</h3>
+<p>Las redes neuronales artificiales toman inspiración del cerebro biológico, aunque de forma muy simplificada:</p>
+<p><strong>Neurona biológica:</strong></p>
+<ul>
+<li>Recibe señales de entrada a través de dendritas.</li>
+<li>Procesa las señales en el cuerpo celular.</li>
+<li>Genera una señal de salida que se transmite por el axón.</li>
+<li>Las conexiones entre neuronas (sinapsis) tienen diferentes fortalezas.</li>
+</ul>
+<p><strong>Neurona artificial (perceptrón):</strong></p>
+<ul>
+<li>Recibe múltiples entradas (x₁, x₂, ..., xₙ).</li>
+<li>Cada entrada tiene un peso asociado (w₁, w₂, ..., wₙ).</li>
+<li>Se calcula una suma ponderada: Σwᵢxᵢ.</li>
+<li>Se aplica una función de activación para producir la salida.</li>
+</ul>
+<h3 id="53-arquitectura-de-una-red-neuronal">5.3. Arquitectura de una red neuronal</h3>
+<h4 id="estructura-basica">Estructura básica</h4>
+<p>Una red neuronal típica tiene tres tipos de capas:</p>
+<p><strong>Capa de entrada:</strong></p>
+<p>Recibe los datos brutos. Cada neurona de entrada representa una característica del dataset.</p>
+<p><strong>Capas ocultas:</strong></p>
+<p>Procesan la información de forma progresiva. Cada capa transforma los datos de la capa anterior en representaciones más abstractas. El "deep" viene de tener múltiples capas ocultas.</p>
+<p><strong>Capa de salida:</strong></p>
+<p>Produce el resultado final: una predicción, clasificación o generación.</p>
+<h4 id="conexiones-y-pesos">Conexiones y pesos</h4>
+<p>Las neuronas de capas adyacentes están conectadas entre sí. Cada conexión tiene un peso numérico que determina la importancia de esa conexión. Durante el entrenamiento, estos pesos se ajustan para minimizar el error de la predicción.</p>
+<h3 id="54-funcionamiento-forward-propagation-y-backpropagation">5.4. Funcionamiento: forward propagation y backpropagation</h3>
+<h4 id="forward-propagation-propagacion-hacia-adelante">Forward propagation (propagación hacia adelante)</h4>
+<p>Cuando introducimos datos en una red neuronal:</p>
+<ol>
+<li>Los datos entran por la capa de entrada.</li>
+<li>Cada neurona calcula la suma ponderada de sus entradas.</li>
+<li>Se aplica la función de activación.</li>
+<li>El resultado pasa a la siguiente capa.</li>
+<li>Este proceso se repite hasta llegar a la capa de salida.</li>
+</ol>
+<h4 id="backpropagation-propagacion-hacia-atras">Backpropagation (propagación hacia atrás)</h4>
+<p>Para entrenar la red:</p>
+<ol>
+<li>Se calcula el error en la salida (comparando predicción con valor real).</li>
+<li>El error se Propaga hacia atrás, capa por capa.</li>
+<li>Se ajustan los pesos de las conexiones para reducir el error.</li>
+<li>Este proceso se repite muchas veces con los datos de entrenamiento.</li>
+</ol>
+<h3 id="55-tipos-de-redes-neuronales-profundas">5.5. Tipos de redes neuronales profundas</h3>
+<h4 id="redes-neuronales-convolucionales-cnn">Redes Neuronales Convolucionales (CNN)</h4>
+<p>Las CNN están diseñadas específicamente para procesar datos con estructura espacial, como imágenes.</p>
+<p><strong>Componentes clave:</strong></p>
+<ul>
+<li><strong>Capas convolucionales:</strong> Aplican filtros que detectan características como bordes, texturas, patrones.</li>
+<li><strong>Capas de pooling:</strong> Reducen la dimensionalidad preservando la información esencial.</li>
+<li><strong>Capas fully connected:</strong> Realizan la clasificación final basada en las características extraídas.</li>
+</ul>
+<p><strong>Aplicaciones:</strong></p>
+<ul>
+<li>Reconocimiento de imágenes (clasificación, detección de objetos).</li>
+<li>Diagnóstico médico por imagen.</li>
+<li>Conducción autónoma (detección de peatones, señales, carriles).</li>
+<li>Análisis de video.</li>
+</ul>
+<h4 id="redes-neuronales-recurrentes-rnn">Redes Neuronales Recurrentes (RNN)</h4>
+<p>Las RNN están diseñadas para procesar datos secuenciales o temporales, donde el orden importa.</p>
+<p><strong>El problema que resuelven:</strong></p>
+<p>Las redes tradicionales asumen que las entradas son independientes entre sí. Pero en secuencias (texto, audio, series temporales), cada elemento depende de los anteriores.</p>
+<p><strong>Funcionamiento:</strong></p>
+<p>Las RNN tienen "memoria" interna que les permite recordar información de pasos anteriores en la secuencia.</p>
+<p><strong>Limitaciones:</strong></p>
+<p>Las RNN básicas sufren de problemas de desvanecimiento de gradiente, que dificultan el aprendizaje de dependencias a largo plazo.</p>
+<h4 id="transformers">Transformers</h4>
+<p>Los Transformers, introducidos en 2017, han revolucionado el procesamiento del lenguaje natural.</p>
+<p><strong>Innovación clave:</strong></p>
+<p>En lugar de procesar secuencias paso a paso, los Transformers procesan toda la secuencia en paralelo utilizando un mecanismo llamado "atención" (attention).</p>
+<p><strong>Mecanismo de atención:</strong></p>
+<p>Permite que cada elemento de la secuencia preste atención a todos los demás elementos, capturando dependencias sin importar la distancia.</p>
+<p><strong>Aplicaciones:</strong></p>
+<ul>
+<li>Modelos de lenguaje grandes (GPT, BERT, Claude).</li>
+<li>Traducción automática.</li>
+<li>Resumen de texto.</li>
+<li>Generación de código.</li>
+</ul>
+<h3 id="56-ventajas-y-limitaciones-del-deep-learning">5.6. Ventajas y limitaciones del Deep Learning</h3>
+<h4 id="ventajas">Ventajas</h4>
+<ul>
+<li><strong>Aprendizaje automático de features:</strong> A diferencia del ML tradicional, no requiere diseñar manualmente las características. La red las aprende automáticamente.</li>
+<li><strong>Escalabilidad:</strong> El rendimiento mejora con más datos y más capacidad computacional.</li>
+<li><strong>Precisión state-of-the-art:</strong> Alcanza los mejores resultados en muchos problemas complejos.</li>
+<li><strong>Generalización:</strong> Las features aprendidas pueden transferirse a problemas relacionados.</li>
+</ul>
+<h4 id="limitaciones">Limitaciones</h4>
+<ul>
+<li><strong>Necesita grandes cantidades de datos:</strong> Millones de ejemplos para entrenar eficazmente.</li>
+<li><strong>Alto coste computacional:</strong> Requiere GPUs o TPUs especializadas.</li>
+<li><strong>"Caja negra":</strong> Dificultad para explicar cómo llega a sus conclusiones.</li>
+<li><strong>Consumo energético:</strong> El entrenamiento tiene un significativo impacto ambiental.</li>
+<li><strong>Sobreajuste:</strong> Puede memorizar datos de entrenamiento sin generalizar si no se regulariza adecuadamente.</li>
+</ul>
+<hr />
+<h2 id="tema-6-tratamiento-de-datos-en-inteligencia-artificial">TEMA 6: TRATAMIENTO DE DATOS EN INTELIGENCIA ARTIFICIAL</h2>
+<h3 id="61-el-dato-como-pilar-fundamental">6.1. El dato como pilar fundamental</h3>
+<p>Los datos son el insumo más crítico para cualquier sistema de IA. Sin datos de calidad, ningún algoritmo, por sofisticado que sea, producirá resultados útiles. Esta realidad ha llevado a muchas organizaciones a darse cuenta de que aproximadamente el 80% del esfuerzo en proyectos de IA se dedica a la recopilación, limpieza y preparación de datos, y solo el 20% al desarrollo de modelos.</p>
+<h3 id="62-el-ciclo-de-vida-de-los-datos-en-proyectos-de-ia">6.2. El ciclo de vida de los datos en proyectos de IA</h3>
+<h4 id="recopilacion">Recopilación</h4>
+<p>La primera etapa consiste en identificar y obtener los datos necesarios:</p>
+<ul>
+<li><strong>Fuentes internas:</strong> Bases de datos corporativas, CRMs, ERPs, logs de aplicaciones.</li>
+<li><strong>Fuentes externas:</strong> Datos públicos, APIs, datasets comprados, web scraping.</li>
+<li><strong>Datos generados por sensores:</strong> IoT, dispositivos inteligentes, imágenes, audio.</li>
+</ul>
+<p><strong>Consideraciones:</strong></p>
+<ul>
+<li>Legalidad de la obtención y uso.</li>
+<li>Consentimiento de los usuarios.</li>
+<li>Representatividad de los datos.</li>
+</ul>
+<h4 id="almacenamiento">Almacenamiento</h4>
+<p>Los datos deben guardarse de forma segura y accesible:</p>
+<ul>
+<li><strong>Data warehouses:</strong> Para datos estructurados y analíticos.</li>
+<li><strong>Data lakes:</strong> Para datos estructurados, semiestructurados y no estructurados.</li>
+<li><strong>Bases de datos operacionales:</strong> Para datos de aplicaciones en tiempo real.</li>
+</ul>
+<p><strong>Requisitos:</strong></p>
+<ul>
+<li>Seguridad y control de acceso.
+-备份 y recuperación.</li>
+<li>Escalabilidad.</li>
+</ul>
+<h4 id="limpieza">Limpieza</h4>
+<p>Esta etapa consume la mayor parte del tiempo:</p>
+<ul>
+<li><strong>Valores faltantes:</strong> ¿Eliminar registros? ¿Imputar valores? ¿Ignorar?</li>
+<li><strong>Errores:</strong> Datos mal introducidos, duplicados, inconsistencias.</li>
+<li><strong>Outliers:</strong> ¿Son errores o son datos genuinos pero raros?</li>
+<li><strong>Formato:</strong> Estandarizar formatos de fecha, texto, unidades.</li>
+</ul>
+<h4 id="transformacion">Transformación</h4>
+<p>Convertir datos crudos en formatos útiles:</p>
+<ul>
+<li><strong>Normalización:</strong> Escalar valores numéricos a un rango común.</li>
+<li><strong>Codificación:</strong> Convertir texto a números (one-hot encoding, label encoding).</li>
+<li><strong>Feature engineering:</strong> Crear nuevas variables derivadas.</li>
+<li><strong>Agregación:</strong> Resumir datos a diferentes niveles de granularidad.</li>
+</ul>
+<h4 id="analisis-exploratorio">Análisis exploratorio</h4>
+<p>Antes de modelar, es crucial entender los datos:</p>
+<ul>
+<li><strong>Distribuciones:</strong> ¿Cómo se distribuyen las variables?</li>
+<li><strong>Correlaciones:</strong> ¿Qué variables están relacionadas?</li>
+<li><strong>Patrones:</strong> ¿Hay patrones obvios o anomalías?</li>
+<li>** Calidad:** ¿Hay problemas que deben abordarse?</li>
+</ul>
+<h4 id="modelado">Modelado</h4>
+<p>Aplicar algoritmos de ML o Deep Learning:</p>
+<ul>
+<li>Seleccionar algoritmo apropiado.</li>
+<li>Dividir datos en entrenamiento, validación y prueba.</li>
+<li>Entrenar y ajustar hiperparámetros.</li>
+<li>Evaluar rendimiento.</li>
+</ul>
+<h4 id="despliegue">Despliegue</h4>
+<p>Poner el modelo en producción:</p>
+<ul>
+<li>Integrar con sistemas existentes.</li>
+<li>Establecer APIs o interfaces.</li>
+<li>Documentar el proceso.</li>
+<li>Planificar mantenimiento.</li>
+</ul>
+<h4 id="monitorizacion">Monitorización</h4>
+<p>Vigilar el modelo en producción:</p>
+<ul>
+<li>Detectar degradación del rendimiento.</li>
+<li>Identificar cambios en los datos (data drift).</li>
+<li>Actualizar y reentrenar cuando sea necesario.</li>
+</ul>
+<h3 id="63-calidad-del-dato">6.3. Calidad del dato</h3>
+<p>La calidad de los datos determina directamente la utilidad de los resultados de IA:</p>
+<h4 id="dimensiones-de-la-calidad">Dimensiones de la calidad</h4>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Descripción</th>
+<th>Ejemplo de problema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Exactitud</strong></td>
+<td>Los datos reflejan la realidad</td>
+<td>Código postal incorrecto</td>
+</tr>
+<tr>
+<td><strong>Completitud</strong></td>
+<td>No faltan valores importantes</td>
+<td>Campo de teléfono vacío</td>
+</tr>
+<tr>
+<td><strong>Consistencia</strong></td>
+<td>No hay contradicciones</td>
+<td>Dos sistemas dan diferentes direcciones</td>
+</tr>
+<tr>
+<td><strong>Actualidad</strong></td>
+<td>Los datos están al día</td>
+<td>Cliente con dirección de hace 10 años</td>
+</tr>
+<tr>
+<td><strong>Relevancia</strong></td>
+<td>Los datos son útiles para el propósito</td>
+<td>Guardar color de ojos para predecir ingresos</td>
+</tr>
+<tr>
+<td><strong>Lineage/trazabilidad</strong></td>
+<td>Se puede rastrear el origen</td>
+<td>No saber de dónde viene un dato</td>
+</tr>
+<tr>
+<td><strong>Disponibilidad</strong></td>
+<td>Los datos son accesibles cuando se necesitan</td>
+<td>Datos en sistema caído</td>
+</tr>
+</tbody>
+</table>
+<h3 id="64-aspectos-criticos-del-tratamiento-de-datos">6.4. Aspectos críticos del tratamiento de datos</h3>
+<h4 id="641-privacidad-y-proteccion-de-datos">6.4.1. Privacidad y protección de datos</h4>
+<p>En la era de la IA, la privacidad es una preocupación fundamental:</p>
+<p><strong>Reglamento General de Protección de Datos (RGPD):</strong></p>
+<p>Es la normativa de la Unión Europea que regula el tratamiento de datos personales:</p>
+<ul>
+<li><strong>Principios fundamentales:</strong></li>
+<li>Licitud, lealtad y transparencia.</li>
+<li>Limitación de la finalidad.</li>
+<li>Minimización de datos.</li>
+<li>Exactitud.</li>
+<li>Limitación del plazo de conservación.</li>
+<li>Integridad y confidencialidad.</li>
+<li>
+<p>Responsabilidad (accountability).</p>
+</li>
+<li>
+<p><strong>Derechos de los interesados:</strong></p>
+</li>
+<li>Acceso a sus datos.</li>
+<li>Rectificación de datos inexactos.</li>
+<li>Supresión ("derecho al olvido").</li>
+<li>Limitación del tratamiento.</li>
+<li>Portabilidad de datos.</li>
+<li>Oposición al tratamiento.</li>
+</ul>
+<p><strong>Técnicas de protección:</strong></p>
+<ul>
+<li><strong>Anonimización:</strong> Eliminar completamente la posibilidad de identificar a personas.</li>
+<li><strong>Seudonimización:</strong> Sustituir identificadores directos por códigos, manteniendo la posibilidad de reidentificar con información adicional.</li>
+<li><strong>Agregación:</strong> Resumir datos de forma que no se pueda vincular a individuos.</li>
+<li><strong>Noise injection:</strong> Añadir ruido aleatorio a los datos para proteger privacidad mientras se mantienen patrones útiles.</li>
+</ul>
+<h4 id="642-sesgos-algoritmicos">6.4.2. Sesgos algorítmicos</h4>
+<p>Los sesgos algorítmicos son uno de los problemas más críticos y debatidos de la IA actual.</p>
+<p><strong>Orígenes del sesgo:</strong></p>
+<ul>
+<li><strong>Sesgos en datos históricos:</strong> Si los datos de entrenamiento reflejan discriminación pasada, el modelo la aprenderá y perpetuará.</li>
+<li><strong>Sesgos de selección:</strong> Muestras no representativas de la población.</li>
+<li><strong>Sesgos de medición:</strong> Variables proxys que capturan discriminación indirectamente.</li>
+<li><strong>Sesgos sociales:</strong> Los desarrolladores incorporan inadvertidamente sus propios sesgos.</li>
+</ul>
+<p><strong>Ejemplos documentados:</strong></p>
+<ul>
+<li>Sistemas de contratación que discriminaban a mujeres porque aprendían de historiales con sesgo de género.</li>
+<li>Algoritmos de crédito que ofrecían peores condiciones a minorías raciales.</li>
+<li>Reconocimiento facial con peor rendimiento para personas de piel oscura.</li>
+</ul>
+<p><strong>Categorías de impacto:</strong></p>
+<ul>
+<li><strong>Impacto grupal:</strong> El sistema funciona peor para ciertos grupos.</li>
+<li><strong>Impacto individual:</strong> Decisiones injustas hacia individuos específicos.</li>
+<li><strong>Impacto social:</strong> Refuerzo de estereotipos y desigualdad sistémica.</li>
+</ul>
+<p><strong>Estrategias de mitigación:</strong></p>
+<ol>
+<li><strong>Datos diversos y representativos:</strong> Asegurar que los datasets reflejen la diversidad de la población.</li>
+<li><strong>Auditorías:</strong> Evaluar regularmente el rendimiento del modelo para diferentes grupos.</li>
+<li><strong>Equidad en métricas:</strong> Utilizar métricas que evalúen la equidad entre grupos.</li>
+<li><strong>Explicabilidad:</strong> Comprender cómo y por qué el modelo toma decisiones.</li>
+<li><strong>Diversificación de equipos:</strong> Equipos diversos identifican más puntos ciegos.</li>
+<li><strong>Participación afectada:</strong> Incluir a las comunidades impactadas en el diseño.</li>
+</ol>
+<h4 id="643-seguridad-y-ciberseguridad">6.4.3. Seguridad y ciberseguridad</h4>
+<p>Los sistemas de IA presentan nuevas vulnerabilidades:</p>
+<p><strong>Tipos de ataques:</strong></p>
+<ul>
+<li>
+<p><strong>Ataques adversarios (adversarial attacks):</strong> Modificaciones imperceptibles a los inputs que engañan al modelo. Ejemplo: añadir un patrón específico a una señal de stop para que un coche autónomo no lo reconozca.</p>
+</li>
+<li>
+<p><strong>Poisoning (envenenamiento):</strong> Corromper los datos de entrenamiento para introducir vulnerabilidades o degrade el rendimiento.</p>
+</li>
+<li>
+<p><strong>Model inversion:</strong> Extraer información sensible de los modelos entrenados. Ejemplo: reconstruir rostros a partir de un sistema de reconocimiento.</p>
+</li>
+<li>
+<p><strong>Membership inference:</strong> Determinar si un bestimmtes dato formó parte del entrenamiento del modelo.</p>
+</li>
+<li>
+<p><strong>Evasion:</strong> Camuflar malware para evitar detección por sistemas de ML de seguridad.</p>
+</li>
+</ul>
+<p><strong>Defensas:</strong></p>
+<ul>
+<li>Validación rigurosa de inputs.</li>
+<li>Detección de anomalías en datos.</li>
+<li>Entrenamiento adversario (entrenar con ejemplos de ataques).</li>
+<li>Monitorización continua del comportamiento.</li>
+<li>Segmentación de redes.</li>
+<li>Cifrado de datos sensibles.</li>
+</ul>
+<h4 id="644-explicabilidad-y-transparencia">6.4.4. Explicabilidad y transparencia</h4>
+<p>La explicabilidad se refiere a la capacidad de comprender cómo un modelo de IA llega a sus conclusiones.</p>
+<p><strong>¿Por qué importa?</strong></p>
+<ul>
+<li>Genera confianza en los usuarios.</li>
+<li>Permite identificar y corregir errores.</li>
+<li>Facilita el cumplimiento normativo.</li>
+<li>Es esencial en sectores regulados (banca, sanidad, justicia).</li>
+<li>Permite a los afectados entender y cuestionar decisiones.</li>
+</ul>
+<p><strong>Niveles de explicabilidad:</strong></p>
+<ul>
+<li><strong>Modelos intrínsecamente explicables:</strong> Algunos modelos son naturalmente interpretables:</li>
+<li>Árboles de decisión.</li>
+<li>Regresión lineal.</li>
+<li>
+<p>K-nearest neighbors.</p>
+</li>
+<li>
+<p><strong>Técnicas post-hoc:</strong> Métodos para explicar modelos complejos después de entrenarlos:</p>
+</li>
+<li>SHAP (SHapley Additive exPlanations).</li>
+<li>LIME (Local Interpretable Model-agnostic Explanations).</li>
+<li>
+<p>Análisis de features importance.</p>
+</li>
+<li>
+<p><strong>Explicaciones globales:</strong> Cómo funciona el modelo en general.</p>
+</li>
+<li><strong>Explicaciones locales:</strong> Por qué el modelo tomó una decisión específica para un实例 concreto.</li>
+</ul>
+<hr />
+<h2 id="tema-7-mineria-de-datos-data-mining">TEMA 7: MINERÍA DE DATOS (DATA MINING)</h2>
+<h3 id="71-concepto-y-alcance">7.1. Concepto y alcance</h3>
+<p>La minería de datos es el proceso de descubrir patrones, correlaciones y conocimientos útiles a partir de grandes volúmenes de datos. Utiliza técnicas de estadística, aprendizaje automático y sistemas de bases de datos para extraer y analizar información de forma automatizada.</p>
+<p><strong>Diferencia con conceptos relacionados:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Descripción</th>
+<th>Relación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Big Data</strong></td>
+<td>Volúmenes masivos de datos y tecnologías para manejarlos</td>
+<td>Los datos que mineramos</td>
+</tr>
+<tr>
+<td><strong>Business Intelligence</strong></td>
+<td>Herramientas para análisis de negocios y reporting</td>
+<td>Consume insights de minería</td>
+</tr>
+<tr>
+<td><strong>Data Mining</strong></td>
+<td>Técnicas para extraer conocimiento</td>
+<td>El proceso de extracción</td>
+</tr>
+<tr>
+<td><strong>Machine Learning</strong></td>
+<td>Métodos algorítmicos para que las máquinas aprendan</td>
+<td>Herramientas de minería</td>
+</tr>
+<tr>
+<td><strong>Analytics</strong></td>
+<td>Análisis amplio de datos para generar insights</td>
+<td>Resultado de múltiples técnicas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-el-proceso-kdd">7.2. El proceso KDD</h3>
+<p>KDD (Knowledge Discovery in Databases) es un proceso estructurado para extraer conocimiento de datos:</p>
+<ol>
+<li>
+<p><strong>Selección:</strong> Identificar y recopilar los datos relevantes de entre todas las fuentes disponibles.</p>
+</li>
+<li>
+<p><strong>Preprocesamiento:</strong> Limpiar y preparar los datos. Manejar valores faltantes, errores, inconsistencias.</p>
+</li>
+<li>
+<p><strong>Transformación:</strong> Convertir datos a formatos adecuados. Normalizar, agregar, crear nuevas variables.</p>
+</li>
+<li>
+<p><strong>Minería de datos:</strong> Aplicar algoritmos para extraer patrones. Elegir técnicas apropiadas según los objetivos.</p>
+</li>
+<li>
+<p><strong>Evaluación:</strong> Interpretar y validar los resultados. ¿Los patrones son útiles y significativos?</p>
+</li>
+<li>
+<p><strong>Interpretación/Despliegue:</strong> Presentar el conocimiento de forma útil para la toma de decisiones.</p>
+</li>
+</ol>
+<h3 id="73-tipos-de-mineria-de-datos">7.3. Tipos de minería de datos</h3>
+<h4 id="731-mineria-de-datos-descriptiva">7.3.1. Minería de datos descriptiva</h4>
+<p>Busca resumir y caracterizar los datos para comprender mejor su naturaleza.</p>
+<p><strong>Técnicas principales:</strong></p>
+<ul>
+<li><strong>Análisis de clustering:</strong> Agrupar datos similares en clusters (segmentos) sin categorías predefinidas.</li>
+<li>
+<p>Ejemplo: Segmentar clientes en grupos según comportamiento de compra.</p>
+</li>
+<li>
+<p><strong>Análisis de asociaciones:</strong> Encontrar relaciones frecuentes entre variables.</p>
+</li>
+<li>
+<p>Ejemplo: "El 80% de los clientes que compran pañales also buy cerveza" (la famosa correlación de Walmart).</p>
+</li>
+<li>
+<p><strong>Análisis de secuencias:</strong> Identificar patrones temporales o comportamentales.</p>
+</li>
+<li>
+<p>Ejemplo: Recorridos típicos de navegación en una web.</p>
+</li>
+<li>
+<p><strong>Detección de anomalías:</strong> Identificar valores atípicos o comportamientos inusuales.</p>
+</li>
+<li>Ejemplo: Transacciones financieras que se desvían del patrón normal.</li>
+</ul>
+<h4 id="732-mineria-de-datos-predictiva">7.3.2. Minería de datos predictiva</h4>
+<p>Utiliza datos actuales e históricos para hacer predicciones sobre eventos futuros.</p>
+<p><strong>Técnicas principales:</strong></p>
+<ul>
+<li><strong>Clasificación:</strong> Asignar elementos a clases predefinidas.</li>
+<li>Ejemplo: Clasificar emails como spam o no spam.</li>
+<li>
+<p>Algoritmos: Árboles de decisión, Random Forest, SVM, redes neuronales.</p>
+</li>
+<li>
+<p><strong>Regresión:</strong> Predecir valores numéricos continuos.</p>
+</li>
+<li>Ejemplo: Predecir el precio de una vivienda.</li>
+<li>
+<p>Algoritmos: Regresión lineal, regresión polinómica, redes neuronales.</p>
+</li>
+<li>
+<p><strong>Series temporales:</strong> Predecir valores futuros basándose en tendencias y patrones temporales.</p>
+</li>
+<li>Ejemplo: Predecir las ventas del próximo mes.</li>
+<li>
+<p>Algoritmos: ARIMA, Prophet, redes neuronales recurrentes.</p>
+</li>
+<li>
+<p><strong>Detección de fraude:</strong> Identificar transacciones o actividades sospechosas.</p>
+</li>
+<li>Ejemplo: Bloquear una tarjeta de crédito sospechosa.</li>
+<li>Combinación de clasificación y detección de anomalías.</li>
+</ul>
+<h4 id="733-mineria-de-texto-text-mining">7.3.3. Minería de texto (Text Mining)</h4>
+<p>Procesa y analiza grandes cantidades de texto no estructurado para extraer información útil.</p>
+<p><strong>Técnicas principales:</strong></p>
+<ul>
+<li><strong>Procesamiento de lenguaje natural (NLP):</strong> Comprensión y generación de texto.</li>
+<li><strong>Análisis de sentimientos:</strong> Determinar si un texto expresa opinión positiva, negativa o neutral.</li>
+<li><strong>Extracción de entidades:</strong> Identificar personas, lugares, organizaciones mencionadas.</li>
+<li><strong>Clasificación de documentos:</strong> Asignar documentos a categorías.</li>
+<li><strong>Sumarización automática:</strong> Generar resúmenes de documentos largos.</li>
+<li><strong>Topic modeling:</strong> Descubrir temas latentes en una colección de documentos.</li>
+</ul>
+<p><strong>Aplicaciones:</strong></p>
+<ul>
+<li>Análisis de opiniones de clientes en redes sociales.</li>
+<li>Monitorización de marca y reputación.</li>
+<li>Clasificación automatizada de tickets de soporte.</li>
+<li>Detección de noticias falsas.</li>
+</ul>
+<h4 id="734-mineria-web-web-mining">7.3.4. Minería web (Web Mining)</h4>
+<p>Analiza datos relacionados con la navegación y uso de sitios web.</p>
+<p><strong>Tipos:</strong></p>
+<ul>
+<li><strong>Minería de contenido:</strong> Extraer información del contenido de páginas web.</li>
+<li><strong>Minería de estructura:</strong> Analizar enlaces, navegación, arquitectura del sitio.</li>
+<li><strong>Minería de uso:</strong> Estudiar patrones de comportamiento de usuarios.</li>
+</ul>
+<h3 id="74-aplicaciones-sectoriales-en-espana">7.4. Aplicaciones sectoriales en España</h3>
+<h4 id="sector-tecnologico">Sector tecnológico</h4>
+<p>Indra Group, primera empresa española en obtener la certificación AENOR de Tecnología de IA Responsable, utiliza agentes de IA con más de 5,500 profesionales. Telefónica y Accenture impulsan asistentes inteligentes y automatización avanzada.</p>
+<h4 id="telecomunicaciones">Telecomunicaciones</h4>
+<p>Telefónica, MasOrange y Vodafone España aplican IA para optimizar redes, anticipar incidencias, mejorar atención al cliente y agilizar resolución de consultas.</p>
+<h4 id="energia">Energía</h4>
+<p>Iberdrola, Endesa y Naturgy utilizan IA para mantenimiento predictivo, gestión de activos, previsión de demanda y optimización de redes energéticas.</p>
+<h4 id="servicios-financieros">Servicios financieros</h4>
+<p>BBVA, CaixaBank y Banco Santander emplean IA para prevención del fraude, evaluación de riesgo crediticio, automatización de procesos y personalización de servicios.</p>
+<h4 id="salud">Salud</h4>
+<p>Quirónsalud, Sanitas y servicios regionales de salud exploran aplicaciones para apoyo al diagnóstico clínico, optimización de procesos asistenciales y análisis de datos médicos.</p>
+<hr />
+<h2 id="tema-8-integracion-de-la-ia-con-otras-tecnologias-habilitadoras">TEMA 8: INTEGRACIÓN DE LA IA CON OTRAS TECNOLOGÍAS HABILITADORAS</h2>
+<h3 id="81-la-ia-como-tecnologia-convergente">8.1. La IA como tecnología convergente</h3>
+<p>La IA no actúa de forma aislada; se integra y potencia otras tecnologías clave de la transformación digital. Esta convergencia amplifica exponencialmente el impacto de cada tecnología individual.</p>
+<h3 id="82-ia-y-big-data">8.2. IA y Big Data</h3>
+<p><strong>La relación simbiótica:</strong></p>
+<ul>
+<li>Big Data proporciona los grandes volúmenes de datos que la IA necesita para aprender.</li>
+<li>La IA proporciona las herramientas para extraer valor de esos datos.</li>
+<li>Sin Big Data, la IA tendría límites; sin IA, el Big Data sería solo datos sin insights.</li>
+</ul>
+<p><strong>Aplicaciones combinadas:</strong></p>
+<ul>
+<li>Análisis de sentimientos en redes sociales a escala.</li>
+<li>Personalización en tiempo real.</li>
+<li>Detección de fraude en milliseconds.</li>
+</ul>
+<h3 id="83-ia-e-internet-de-las-cosas-iot">8.3. IA e Internet de las Cosas (IoT)</h3>
+<p><strong>La inteligencia de los sentidos:</strong></p>
+<ul>
+<li>Los dispositivos IoT son los "sentidos" que收集 datos del mundo físico.</li>
+<li>La IA es el "cerebro" que interpreta esos datos y toma decisiones.</li>
+<li>Juntos permiten sistemas reactivos inteligentes en tiempo real.</li>
+</ul>
+<p><strong>Aplicaciones combinadas:</strong></p>
+<ul>
+<li><strong>Edificios inteligentes:</strong> Sensores de occupancy ajustan iluminación y temperatura automáticamente.</li>
+<li><strong>Ciudades inteligentes:</strong> Optimización de tráfico, gestión de residuos, seguridad.</li>
+<li><strong>Industria 4.0:</strong> Mantenimiento predictivo de maquinaria, control de calidad automatizado.</li>
+<li><strong>Agricultura de precisión:</strong> Sensores en campos que optimizan riego y fertilizantes.</li>
+</ul>
+<h3 id="84-ia-y-cloud-computing">8.4. IA y Cloud Computing</h3>
+<p><strong>La infraestructura perfecta:</strong></p>
+<ul>
+<li>Cloud proporciona la infraestructura escalable que la IA necesita.</li>
+<li>Los servicios de IA (AI-as-a-Service) democratizan el acceso a estas tecnologías.</li>
+<li>Reducen barreras de entrada para empresas de todos los tamaños.</li>
+</ul>
+<p><strong>Servicios clave:</strong></p>
+<ul>
+<li><strong>Computación intensiva:</strong> GPUs y TPUs bajo demanda.</li>
+<li><strong>Modelos pre-entrenados:</strong> Reconocimiento de voz, visión artificial, NLP.</li>
+<li><strong>Plataformas de ML:</strong> AutoML, notebooks, pipelines de entrenamiento.</li>
+<li><strong>Infraestructura de despliegue:</strong> Contenedores, serverless, APIs.</li>
+</ul>
+<h3 id="85-ia-y-blockchain">8.5. IA y Blockchain</h3>
+<p><strong>La confianza distribuida:</strong></p>
+<ul>
+<li>Blockchain proporciona un registro inmutable y transparente.</li>
+<li>La IA puede analizar patrones en datos de blockchain.</li>
+<li>Juntas enable soluciones de trazabilidad y automatización con confianza.</li>
+</ul>
+<p><strong>Aplicaciones:</strong></p>
+<ul>
+<li>Trazabilidad de cadena de suministro.</li>
+<li>Contratos inteligentes con lógica de IA.</li>
+<li>Prevención de falsificaciones.</li>
+<li>Gestión de identidades digitales.</li>
+</ul>
+<h3 id="86-ia-y-robotica">8.6. IA y Robótica</h3>
+<p><strong>La física de la inteligencia:</strong></p>
+<ul>
+<li>La robótica proporciona cuerpos físicos que ejecutan acciones.</li>
+<li>La IA proporciona la inteligencia para decidir qué acciones tomar.</li>
+<li>Juntos enable robots colaborativos (cobots) que trabajan con humanos.</li>
+</ul>
+<p><strong>Aplicaciones:</strong></p>
+<ul>
+<li>Manufactura avanzada.</li>
+<li>Logística y almacenes automatizados.</li>
+<li>Cirugía asistida por robots.</li>
+<li>Exploración y desastres.</li>
+</ul>
+<h3 id="87-ia-y-realidad-aumentadavirtual">8.7. IA y Realidad Aumentada/Virtual</h3>
+<p><strong>La realidad aumentada:</strong></p>
+<ul>
+<li>AR/VR proporcionan experiencias inmersivas e interactivas.</li>
+<li>La IA mejora el reconocimiento del entorno y la personalización.</li>
+<li>Permite interfaces más naturales con la tecnología.</li>
+</ul>
+<p><strong>Aplicaciones:</strong></p>
+<ul>
+<li>Formación y simulación.</li>
+<li>Diseño y visualización de productos.</li>
+<li>Mantenimiento远程 assistance.</li>
+<li>Entretenimiento personalizado.</li>
+</ul>
+<hr />
+<h2 id="tema-9-tendencias-actuales-y-futuro-de-la-ia">TEMA 9: TENDENCIAS ACTUALES Y FUTURO DE LA IA</h2>
+<h3 id="91-ia-agentica">9.1. IA Agéntica</h3>
+<p>La IA agéntica representa la próxima frontera: sistemas capaces de actuar de forma autónoma para completar objetivos complejos.</p>
+<p><strong>Características:</strong></p>
+<ul>
+<li>No solo responden a prompts; planean y ejecutan secuencias de acciones.</li>
+<li>Pueden utilizar múltiples herramientas y aplicaciones.</li>
+<li>Interactúan con el mundo real a través de APIs y acciones.</li>
+<li>Requieren supervisión y mecanismos de control diferentes.</li>
+</ul>
+<p><strong>Aplicaciones actuales:</strong></p>
+<ul>
+<li>Asistentes que pueden navegar web, reservar citas, hacer compras.</li>
+<li>Agentes de software que automatizan flujos de trabajo empresariales.</li>
+<li>Sistemas de investigación autónomos que analizan papers y generan hipótesis.</li>
+</ul>
+<h3 id="92-ia-multimodal">9.2. IA Multimodal</h3>
+<p>Los modelos que integran múltiples modalidades: texto, imagen, audio, vídeo, código.</p>
+<p><strong>Avances:</strong></p>
+<ul>
+<li>Capacidad de entender y generar contenido en múltiples formatos.</li>
+<li>Preguntar sobre una imagen y obtener una respuesta detallada.</li>
+<li>Crear imágenes a partir de descripciones textuales.</li>
+<li>Transcodificación entre modalidades.</li>
+</ul>
+<h3 id="93-ia-explicable-xai">9.3. IA Explicable (XAI)</h3>
+<p>La demanda de explicabilidad está creciendo, especialmente en sectores regulados.</p>
+<p><strong>Desarrollos:</strong></p>
+<ul>
+<li>Estándares de documentación de modelos.</li>
+<li>Herramientas de explicabilidad más sofisticadas.</li>
+<li>Regulaciones que requieren transparencia en decisiones automatizadas.</li>
+</ul>
+<h3 id="94-etica-y-gobernanza-de-la-ia">9.4. Ética y Gobernanza de la IA</h3>
+<p><strong>Marcos regulatorios:</strong></p>
+<ul>
+<li>Reglamento de IA de la Unión Europea (AI Act).</li>
+<li>Directrices éticas de organismos internacionales.</li>
+<li>Iniciativas de certificación y auditabilidad.</li>
+</ul>
+<p><strong>Principios emergentes:</strong></p>
+<ul>
+<li>IA por diseño (ethics by design).</li>
+<li>Responsabilidad y rendición de cuentas.</li>
+<li>Equidad y no discriminación.</li>
+<li>Privacidad y protección de datos.</li>
+</ul>
+<hr />
+<h2 id="tema-10-conclusiones">TEMA 10: CONCLUSIONES</h2>
+<p>Tras el estudio detallado de esta unidad, podemos establecer las siguientes conclusiones fundamentales:</p>
+<h3 id="101-la-ia-aprende-a-partir-de-datos-mediante-modelos-de-aprendizaje-automatico-y-profundo">10.1. La IA aprende a partir de datos mediante modelos de aprendizaje automático y profundo</h3>
+<p>Los sistemas de IA no son más que algoritmos matemáticos sofisticados que aprenden patrones directamente de los datos. El Machine Learning y el Deep Learning son las principales técnicas que hacen posible este aprendizaje, cada una con fortalezas y aplicaciones específicas. La elección entre ellas depende del tipo de problema, la cantidad de datos disponibles y los recursos computacionales.</p>
+<h3 id="102-existen-tres-tipos-de-ia-siendo-la-ia-estrecha-la-unica-presente-en-la-actualidad">10.2. Existen tres tipos de IA, siendo la IA estrecha la única presente en la actualidad</h3>
+<p>La IA Estrecha (Narrow AI) es la única que existe de manera funcional actualmente. Sus aplicaciones son extraordinariamente valiosas y ya están transformando todos los sectores económicos. La IA General y la Superinteligencia son conceptos teóricos que, aunque objeto de intensa investigación y especulación, aún no se han materializado.</p>
+<h3 id="103-el-procesamiento-de-datos-es-clave-en-la-ia">10.3. El procesamiento de datos es clave en la IA</h3>
+<p>La calidad, cantidad y preparación de los datos determinan directamente el éxito de cualquier proyecto de IA. Las organizaciones deben invertir significativamente en infraestructura de datos, gobernanza y prácticas de gestión de calidad. El viejo dicho "basura进去, basura sale" (GIGO) es más cierto que nunca en la era del Machine Learning.</p>
+<h3 id="104-la-mineria-de-datos-extrae-patrones-y-conocimiento-util">10.4. La minería de datos extrae patrones y conocimiento útil</h3>
+<p>Técnicas como el clustering, la clasificación, la detección de anomalías y el análisis de asociaciones permiten descubrir información valiosa que drive la toma de decisiones empresariales. La minería de datos transforma datos brutos en conocimiento actionably.</p>
+<h3 id="105-la-ia-se-integra-con-otras-tecnologias-habilitadoras-digitales">10.5. La IA se integra con otras tecnologías habilitadoras digitales</h3>
+<p>La convergencia de IA con Big Data, IoT, Cloud Computing, Blockchain, Robótica y otras tecnologías amplifica el impacto de la transformación digital. Las organizaciones más exitosas son aquellas que adoptan un enfoque holístico de la digitalización.</p>
+<h3 id="106-la-adopcion-de-ia-en-espana-esta-en-expansion-significativa">10.6. La adopción de IA en España está en expansión significativa</h3>
+<p>Con un 61% de empresas utilizando ya soluciones de IA (por encima de la media europea), España se posiciona como uno de los países líderes en adopción. Sin embargo, la brecha entre uso básico y avanzado indica que todavía hay recorrido para深度 integración.</p>
+<h3 id="107-la-ia-no-sustituye-el-talento-humano-lo-potencia">10.7. La IA no sustituye el talento humano, lo potencia</h3>
+<p>Los datos demuestran consistentemente que el impacto de la IA es mucho mayor cuando va acompañado de inversión en formación, desarrollo de competencias y medidas que favorezcan la experiencia de los profesionales. La combinación de tecnología y talento será el principal diferencial competitivo.</p>
+<h3 id="108-la-adopcion-responsable-de-ia-es-imprescindible">10.8. La adopción responsable de IA es imprescindible</h3>
+<p>Privacidad, sesgos algorítmicos, seguridad y explicabilidad no son opcionales sino requisitos fundamentales. Las organizaciones que implementen IA de forma ética y responsable no solo cumplirán regulaciones sino que ganarán la confianza de clientes y empleados.</p>
+<hr />
+<h2 id="glosario-de-terminos">GLOSARIO DE TÉRMINOS</h2>
+<table>
+<thead>
+<tr>
+<th>Término</th>
+<th>Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AGI (IA General)</strong></td>
+<td>Hipotética IA con capacidades cognitivas similares a las humanas en cualquier domaine</td>
+</tr>
+<tr>
+<td><strong>AI-as-a-Service</strong></td>
+<td>Soluciones de IA disponibles en la nube bajo demanda</td>
+</tr>
+<tr>
+<td><strong>Algoritmo</strong></td>
+<td>Conjunto finito de instrucciones para realizar una tarea o resolver un problema</td>
+</tr>
+<tr>
+<td><strong>AlphaGo/AlphaZero</strong></td>
+<td>Sistemas de DeepMind para juegos de mesa mediante aprendizaje por refuerzo</td>
+</tr>
+<tr>
+<td><strong>Análisis de sentimientos</strong></td>
+<td>Determinación automática de la actitud expresada en un texto</td>
+</tr>
+<tr>
+<td><strong>Anonimización</strong></td>
+<td>Eliminación de la posibilidad de identificar a personas de unos datos</td>
+</tr>
+<tr>
+<td><strong>Ataque adversario</strong></td>
+<td>Manipulación deliberada de inputs para engañar a un modelo de IA</td>
+</tr>
+<tr>
+<td><strong>Backpropagation</strong></td>
+<td>Algoritmo para entrenar redes neuronales mediante propagación del error hacia atrás</td>
+</tr>
+<tr>
+<td><strong>Big Data</strong></td>
+<td>Conjuntos de datos de gran volumen, velocidad y variedad</td>
+</tr>
+<tr>
+<td><strong>Chatbot</strong></td>
+<td>Programa que simula conversaciones humanas mediante IA</td>
+</tr>
+<tr>
+<td><strong>Clustering</strong></td>
+<td>Técnica de agrupamiento de datos similares sin categorías predefinidas</td>
+</tr>
+<tr>
+<td><strong>CNN (Red neuronal convolucional)</strong></td>
+<td>Arquitectura de deep learning para procesamiento de imágenes</td>
+</tr>
+<tr>
+<td><strong>CNN (no la de imágenes)</strong></td>
+<td>Convolutional Neural Network - red neuronal para visión artificial</td>
+</tr>
+<tr>
+<td><strong>Data drift</strong></td>
+<td>Cambio gradual en la distribución de los datos de entrada</td>
+</tr>
+<tr>
+<td><strong>Dataset</strong></td>
+<td>Conjunto estructurado de datos utilizados para entrenamiento o evaluación</td>
+</tr>
+<tr>
+<td><strong>Deep Learning</strong></td>
+<td>Subcampo del ML que utiliza redes neuronales con múltiples capas</td>
+</tr>
+<tr>
+<td><strong>Dropout</strong></td>
+<td>Técnica de regularización que desconecta aleatoriamente neuronas durante el entrenamiento</td>
+</tr>
+<tr>
+<td><strong>Epoch</strong></td>
+<td>Una pasada completa sobre todos los datos de entrenamiento</td>
+</tr>
+<tr>
+<td><strong>Estandarización</strong></td>
+<td>Transformación de datos para que tengan media 0 y desviación estándar 1</td>
+</tr>
+<tr>
+<td><strong>Explicabilidad</strong></td>
+<td>Capacidad de entender cómo un modelo de IA llega a sus conclusiones</td>
+</tr>
+<tr>
+<td><strong>Feature (característica)</strong></td>
+<td>Variable o propiedad medible de un fenómeno</td>
+</tr>
+<tr>
+<td><strong>Feature engineering</strong></td>
+<td>Proceso de crear nuevas features a partir de datos brutos</td>
+</tr>
+<tr>
+<td><strong>Función de pérdida</strong></td>
+<td>Mide la diferencia entre predicciones y valores reales</td>
+</tr>
+<tr>
+<td><strong>Gobernanza de datos</strong></td>
+<td>Conjunto de políticas y procesos para gestionar datos como activo</td>
+</tr>
+<tr>
+<td><strong>GPUs</strong></td>
+<td>Unidades de procesamiento gráfico, eficientes para entrenar redes neuronales</td>
+</tr>
+<tr>
+<td><strong>GPT</strong></td>
+<td>Generative Pre-trained Transformer - arquitectura de modelos de lenguaje</td>
+</tr>
+<tr>
+<td><strong>Gradient descent</strong></td>
+<td>Algoritmo de optimización para ajustar pesos de un modelo</td>
+</tr>
+<tr>
+<td><strong>Hiperparámetro</strong></td>
+<td>Parámetro del modelo establecido antes del entrenamiento</td>
+</tr>
+<tr>
+<td><strong>Hyperparameter tuning</strong></td>
+<td>Proceso de ajustar hiperparámetros para mejorar el rendimiento</td>
+</tr>
+<tr>
+<td><strong>IA Agéntica</strong></td>
+<td>Sistemas de IA capaces de actuar de forma autónoma para completar objetivos</td>
+</tr>
+<tr>
+<td><strong>IA Estrecha</strong></td>
+<td>IA diseñada para tareas específicas sin capacidad de transferencia</td>
+</tr>
+<tr>
+<td><strong>Insights</strong></td>
+<td>Descubrimientos o conocimientos útiles derivados del análisis</td>
+</tr>
+<tr>
+<td><strong>IoT (Internet of Things)</strong></td>
+<td>Red de dispositivos físicos conectados que collectionan e intercambian datos</td>
+</tr>
+<tr>
+<td><strong>K-fold cross-validation</strong></td>
+<td>Técnica de validación que divide datos en K subconjuntos</td>
+</tr>
+<tr>
+<td><strong>KDD</strong></td>
+<td>Knowledge Discovery in Databases - proceso de extracción de conocimiento</td>
+</tr>
+<tr>
+<td><strong>Learning rate</strong></td>
+<td>Tamaño de paso en el ajuste de pesos durante el entrenamiento</td>
+</tr>
+<tr>
+<td><strong>Lineage (trazabilidad)</strong></td>
+<td>Registro del origen y transformaciones de los datos</td>
+</tr>
+<tr>
+<td><strong>Machine Learning</strong></td>
+<td>Rama de la IA que permite a las máquinas aprender de los datos</td>
+</tr>
+<tr>
+<td><strong>Markdown</strong></td>
+<td>Modelo de lenguaje con capacidad de generar texto y código</td>
+</tr>
+<tr>
+<td><strong>Metric</strong></td>
+<td>Medida cuantitativa del rendimiento de un modelo</td>
+</tr>
+<tr>
+<td><strong>MLOps</strong></td>
+<td>Prácticas de desarrollo y operaciones para sistemas de ML</td>
+</tr>
+<tr>
+<td><strong>Modelo</strong></td>
+<td>Representación matemática o computacional aprendida de los datos</td>
+</tr>
+<tr>
+<td><strong>NLP (Procesamiento de lenguaje natural)</strong></td>
+<td>Capacidad de las máquinas para entender y generar texto</td>
+</tr>
+<tr>
+<td><strong>Normalización</strong></td>
+<td>Escalar valores numéricos a un rango común</td>
+</tr>
+<tr>
+<td><strong>ONTSI</strong></td>
+<td>Observatorio Nacional de Tecnología y Sociedad</td>
+</tr>
+<tr>
+<td><strong>One-hot encoding</strong></td>
+<td>Codificación de variables categóricas como vectores binarios</td>
+</tr>
+<tr>
+<td><strong>Outlier</strong></td>
+<td>Valor atípico que se desvía significativamente del resto</td>
+</tr>
+<tr>
+<td><strong>Overfitting</strong></td>
+<td>Cuando un modelo memoriza los datos de entrenamiento y no generaliza</td>
+</tr>
+<tr>
+<td><strong>Paradigma de aprendizaje</strong></td>
+<td>Enfoque fundamental del aprendizaje: supervisado, no supervisado, por refuerzo</td>
+</tr>
+<tr>
+<td><strong>Permutation importance</strong></td>
+<td>Técnica para evaluar la importancia de features</td>
+</tr>
+<tr>
+<td><strong>Pipelines de datos</strong></td>
+<td>Secuencia de transformaciones aplicadas a los datos</td>
+</tr>
+<tr>
+<td><strong>Planteamiento del problema</strong></td>
+<td>Definición de qué queremos predecir y cómo</td>
+</tr>
+<tr>
+<td><strong>Precision</strong></td>
+<td>Proporción de predicciones positivas que son correctas</td>
+</tr>
+<tr>
+<td><strong>Privacidad por diseño</strong></td>
+<td>Incorporación de privacidad desde el inicio del desarrollo</td>
+</tr>
+<tr>
+<td><strong>Prompt</strong></td>
+<td>Instrucción o entrada que se proporciona a un sistema de IA generativa</td>
+</tr>
+<tr>
+<td><strong>Random Forest</strong></td>
+<td>Ensemble de árboles de decisión que promedia sus predicciones</td>
+</tr>
+<tr>
+<td><strong>Re-entrenamiento</strong></td>
+<td>Actualización de un modelo con datos nuevos</td>
+</tr>
+<tr>
+<td><strong>Recall</strong></td>
+<td>Proporción de casos positivos reales que son identificados</td>
+</tr>
+<tr>
+<td><strong>Regulación de la UE</strong></td>
+<td>Marco normativo para IA en la Unión Europea</td>
+</tr>
+<tr>
+<td><strong>Regresión</strong></td>
+<td>Predicción de valores numéricos continuos</td>
+</tr>
+<tr>
+<td><strong>Reskilling</strong></td>
+<td>Formación para adquirir nuevas competencias y adaptarse a nuevos roles</td>
+</tr>
+<tr>
+<td><strong>RGPD</strong></td>
+<td>Reglamento General de Protección de Datos de la UE</td>
+</tr>
+<tr>
+<td><strong>Sesgo algorítmico</strong></td>
+<td>Tendencia sistemática e injusta en las predicciones de un modelo</td>
+</tr>
+<tr>
+<td><strong>Sobreajuste</strong></td>
+<td>Memorización de datos de entrenamiento con pérdida de generalización</td>
+</tr>
+<tr>
+<td><strong>Sobreentrenamiento</strong></td>
+<td>Entrenamiento excesivo que lleva al sobreajuste</td>
+</tr>
+<tr>
+<td><strong>Softmax</strong></td>
+<td>Función que convierte logits en probabilidades</td>
+</tr>
+<tr>
+<td><strong>SVM (Support Vector Machine)</strong></td>
+<td>Algoritmo de clasificación que encuentra el hiperplano óptimo</td>
+</tr>
+<tr>
+<td><strong>t-SNE</strong></td>
+<td>Técnica de reducción de dimensionalidad para visualización</td>
+</tr>
+<tr>
+<td><strong>TensorFlow</strong></td>
+<td>Framework de código abierto para ML y deep learning</td>
+</tr>
+<tr>
+<td><strong>Transfer learning</strong></td>
+<td>Uso de conocimiento de un dominio en otro relacionado</td>
+</tr>
+<tr>
+<td><strong>Transformers</strong></td>
+<td>Arquitectura neuronal para procesamiento de secuencias</td>
+</tr>
+<tr>
+<td><strong>Underfitting</strong></td>
+<td>Cuando un modelo es demasiado simple para capturar los patrones</td>
+</tr>
+<tr>
+<td><strong>Upskilling</strong></td>
+<td>Formación para mejorar las competencias existentes de los empleados</td>
+</tr>
+<tr>
+<td><strong>Validación cruzada</strong></td>
+<td>Técnica para evaluar modelos de forma robusta</td>
+</tr>
+<tr>
+<td><strong>Variable categórica</strong></td>
+<td>Variable que representa categorías o grupos discretos</td>
+</tr>
+<tr>
+<td><strong>Variable continua</strong></td>
+<td>Variable que puede tomar cualquier valor en un rango</td>
+</tr>
+<tr>
+<td><strong>Visión artificial</strong></td>
+<td>Capacidad de las máquinas de interpretar y comprender imágenes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="fuentes">FUENTES</h2>
+<ul>
+<li>ManpowerGroup (2026). "Estudio de Proyección de Empleo 2026". https://www.manpowergroup.es</li>
+<li>La Tribuna de Albacete (2026). "El 11,4% de las empresas españolas ya utiliza IA". Servimedia.</li>
+<li>Amazon Web Services - AWS (2026). "Desbloqueando el potencial de la IA en España en 2026". AWS Summit Madrid 2026.</li>
+<li>CBRE (2026). "El impacto de la inteligencia artificial en la economía, el empleo y la productividad".</li>
+<li>Observatorio Nacional de Tecnología y Sociedad (ONTSI). Datos de adopción de IA en España.</li>
+<li>Reglamento (UE) 2016/679 (RGPD) - Reglamento General de Protección de Datos.</li>
+<li>Reglamento (UE) 2024/1689 - Reglamento de Inteligencia Artificial.</li>
+<li>Goodfellow, I., Bengio, Y., &amp; Courville, A. (2016). "Deep Learning". MIT Press.</li>
+<li>Mitchell, T. (1997). "Machine Learning". McGraw-Hill.</li>
+<li>Russell, S. &amp; Norvig, P. (2020). "Artificial Intelligence: A Modern Approach" (4th ed.). Pearson.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["navigation.instant","navigation.instant","navigation.instant.progress","navigation.tabs","navigation.expand","navigation.path","toc.follow","navigation.top","content.footnote.tooltips"],"redirect":null,"search":"../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copiado al portapapeles","clipboard.copy":"Copiar al portapapeles","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 más en esta página","search.result.more.other":"# más en esta página","search.result.none":"No se encontraron documentos","search.result.one":"1 documento encontrado","search.result.other":"# documentos encontrados","search.result.placeholder":"Teclee para comenzar búsqueda","search.result.term.missing":"Falta","select.version":"Seleccionar versión"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8b1c90bd.min.js"></script>
+      
+    
+  </body>
+</html>
