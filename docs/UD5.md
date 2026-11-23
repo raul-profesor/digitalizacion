@@ -1445,4 +1445,4 @@ Big Data está revolucionando todos los sectores productivos. Las organizaciones
   - Coursera: "Data Science Specialization" - Johns Hopkins
   - edX: "Data Science Professional Certificate" - IBM
   - Google Data Analytics Professional Certificate
-  - Microsoft Certified: Azure Data Scientist Associate
+  - Microsoft Certified: Azure Data Scientist Associate 
